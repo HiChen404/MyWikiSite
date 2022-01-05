@@ -8,9 +8,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Chen's Wiki",
   tagline: "这里是陈晨的知识库，欢迎访问~",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://404Lab.top",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "log",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
   organizationName: "facebook", // Usually your GitHub org/user name.
