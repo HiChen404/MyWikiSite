@@ -662,7 +662,7 @@ https://www.linshi-email.com/
 
   - [卖二手设备一定要注意,你的信息可能并没被删除](https://www.sohu.com/a/312245474_804262)
 
-  - ![](./assets/img/手机取证.jpg)
+  - ![](./assets/img/phone.jpg)
 
 - **MIUI**
 
