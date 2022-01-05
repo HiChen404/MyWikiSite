@@ -15,6 +15,10 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "Chen's Wiki", // Usually your repo name.
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "zh-cn"],
+  },
 
   presets: [
     [
