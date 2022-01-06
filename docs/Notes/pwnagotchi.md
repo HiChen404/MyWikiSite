@@ -6,11 +6,10 @@ image: https://i.imgur.com/mErPwqL.png
 tags: [硬件, 文档]
 ---
 
-# 🤖Pwnagotchi
+# Pwnagotchi
 
 ![Author](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg)
 ![netlify](https://api.netlify.com/api/v1/badges/62b2ea8d-7e62-49d1-bb5a-b507b01377af/deploy-status)
-
 
 ## 1. 配置文件
 
