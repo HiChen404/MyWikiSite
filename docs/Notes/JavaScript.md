@@ -1,5 +1,9 @@
 ---
-sidebar_position: 6
+description: JavaScript 指南
+keywords:
+  - javascript
+image: https://i.imgur.com/mErPwqL.png
+tags: [编程, JS]
 ---
 
 # JavaScript

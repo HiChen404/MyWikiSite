@@ -4,10 +4,18 @@ sidebar_position: 1
 
 # About Me
 
-<!-- ![](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109051019063.svg) -->
+<a href="https://404Lab.top">
+<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109051019063.svg"/>
+ </a> <a href="https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw">
+ <img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-38,506%E4%BA%BA-blue/?labelColor=f5f5f5&logo=wechat"/>
+ </a> <a href="https://www.zhihu.com/people/li-kang-ning">
 
-![Author](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg)
-![netlify](https://api.netlify.com/api/v1/badges/62b2ea8d-7e62-49d1-bb5a-b507b01377af/deploy-status)
+ <img src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E%E6%94%B6%E8%97%8F-54,547%E6%AC%A1-blue/?logo=zhihu&labelColor=e6f7ff&color=blue"/>
+ </a>
+ <br/>
+<br/>
+
+> 🚀**本文档持续更新中...**
 
 ## Biography
 
@@ -19,6 +27,10 @@ Hava fun!
 
 ## Contact
 
+ <a href="mailto:Hi@404Lab.top">
+<img src="https://img.shields.io/badge/Email-Hi%40404Lab.top-blue/?logo=Mail.Ru&color=13c2c2&labelColor=f5f5f5&logoColor=blue"/>
+</a>
+
 Contact me by:
 
 - 公众号 : [404Lab](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109050953203.png)
@@ -28,6 +40,8 @@ Contact me by:
 - Blog: [404Lab.top](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw)
 
 <!-- ![](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109051029424.jpeg) -->
+<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109050953203.png" width="50%"/>
+
 <div id="airConditioning">
 <iframe height="670" scrolling="no" src="https://ac.yunyoujun.cn"></iframe>
  </div>

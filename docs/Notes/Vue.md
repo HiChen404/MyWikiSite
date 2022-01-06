@@ -1,5 +1,9 @@
 ---
-sidebar_position: 4
+description: Vue 指南
+keywords:
+  - vue
+image: https://i.imgur.com/mErPwqL.png
+tags: [编程, Vue]
 ---
 
 # VUE
