@@ -19,7 +19,7 @@ sidebar_position: 1
 
 ## Biography
 
-Hey there! This is [404Lab](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw) !
+Hi there! This is [404Lab](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw) !
 
 You can also visit this website: [zws](short.404lab.top)
 

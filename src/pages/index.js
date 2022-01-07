@@ -18,7 +18,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            Hello! - This is my Wiki site. ⏱️
+            🖱Click Here!
           </Link>
         </div>
       </div>
@@ -31,8 +31,8 @@ export default function Home() {
   return (
     <Layout
       // title={`${siteConfig.title}`}
-      title="HomePage"
-      description="Description will go into a meta tag in <head />"
+      title="Home"
+      description="Wiki知识库/vscode/javascript/软件/工具"
     >
       <HomepageHeader />
       <main>
