@@ -1,12 +1,12 @@
 ---
-description: JavaScript 指南
+description: JavaScript 学习笔记
 keywords:
   - javascript
 image: https://i.imgur.com/mErPwqL.png
 tags: [编程, JS]
 ---
 
-# JavaScript
+# JavaScript 学习笔记
 
 <!-- # <img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"><img src="https://api.netlify.com/api/v1/badges/62b2ea8d-7e62-49d1-bb5a-b507b01377af/deploy-status"><img src="https://badgen.net/github/stars/CyC2018/CS-Notes?icon=github&color=4ab8a1" alt=""> -->
 

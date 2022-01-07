@@ -11,8 +11,10 @@ sidebar_position: 1
  </a> <a href="https://www.zhihu.com/people/li-kang-ning">
 
  <img src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E%E6%94%B6%E8%97%8F-54,547%E6%AC%A1-blue/?logo=zhihu&labelColor=e6f7ff&color=blue"/>
- </a>
- <br/>
+
+</a> <img src="https://img.shields.io/github/last-commit/HiChen404/MyWikiSite?label=%E4%B8%8A%E6%AC%A1%E6%9B%B4%E6%96%B0&logo=github&style=for-the-badge" width="135px"/>
+
+<br/>
 <br/>
 
 > 🚀**本文档持续更新中...**

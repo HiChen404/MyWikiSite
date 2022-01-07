@@ -41,9 +41,16 @@ html {
   padding-left: 30px;
   border-left: 0.5px solid var(--ifm-color-emphasis-300);
   float: right;
-  margin-top: -660px;
+  margin-top: -630px;
   height: 651px;
   overflow: hidden;
+  zoom: 80%;
+}
+
+@media screen and (max-width: 767px) {
+  #airConditioning {
+    display: none;
+  }
 }
 
 /* html[data-theme="dark"] #airConditioning {

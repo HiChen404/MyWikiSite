@@ -6,10 +6,12 @@ image: https://i.imgur.com/mErPwqL.png
 tags: [硬件, 文档]
 ---
 
-# Pwnagotchi
+# Pwnagotchi 笔记
 
 ![Author](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg)
 ![netlify](https://api.netlify.com/api/v1/badges/62b2ea8d-7e62-49d1-bb5a-b507b01377af/deploy-status)
+
+<img src="https://pwnagotchi.ai/pwnagotchi.gif?v=2" width="40%"/>
 
 ## 1. 配置文件
 
@@ -36,3 +38,8 @@ username:pwnagotchi,password:pwnagotchi
 ```
 username:changeme password:changeme
 ```
+
+<img  src="https://i.imgur.com/c7xh4hN.png" width="80%"/>
+<br/><br/>
+
+> 参考文档: [Pwnagotchi](https://pwnagotchi.ai/)

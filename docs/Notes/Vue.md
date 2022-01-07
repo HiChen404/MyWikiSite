@@ -6,7 +6,7 @@ image: https://i.imgur.com/mErPwqL.png
 tags: [编程, Vue]
 ---
 
-# VUE
+# Vue 学习笔记
 
 ![Author](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg)
 ![netlify](https://api.netlify.com/api/v1/badges/62b2ea8d-7e62-49d1-bb5a-b507b01377af/deploy-status)
