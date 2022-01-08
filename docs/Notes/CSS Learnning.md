@@ -8,7 +8,7 @@ tags: [编程, CSS]
 
 # CSS 学习笔记
 
-## <img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109021204571.svg"/>
+![Author](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg)
 
 ### 学习网站：
 

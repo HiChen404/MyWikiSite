@@ -61,3 +61,11 @@ html {
   height: 651px;
   overflow: hidden;
 } */
+
+hr {
+  border: 0.5px solid rgb(245, 244, 244);
+  padding: 0;
+  margin: 0;
+  width: 90%;
+  color: rgb(201, 120, 120);
+}

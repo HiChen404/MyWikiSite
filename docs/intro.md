@@ -4,15 +4,15 @@ sidebar_position: 1
 
 # About Me
 
-<a href="https://404Lab.top">
+<img src="https://img.shields.io/github/last-commit/HiChen404/MyWikiSite?label=%E4%B8%8A%E6%AC%A1%E6%9B%B4%E6%96%B0&logo=github&style=for-the-badge" width="135px"/> <a href="https://404Lab.top">
 <img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109051019063.svg"/>
- </a> <a href="https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw">
- <img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-38,506%E4%BA%BA-blue/?labelColor=f5f5f5&logo=wechat"/>
- </a> <a href="https://www.zhihu.com/people/li-kang-ning">
+</a> <a href="https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw">
+<img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-38,506%E4%BA%BA-blue/?labelColor=f5f5f5&logo=wechat"/>
+</a> <a href="https://www.zhihu.com/people/li-kang-ning">
 
  <img src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E%E6%94%B6%E8%97%8F-54,547%E6%AC%A1-blue/?logo=zhihu&labelColor=e6f7ff&color=blue"/>
 
-</a> <img src="https://img.shields.io/github/last-commit/HiChen404/MyWikiSite?label=%E4%B8%8A%E6%AC%A1%E6%9B%B4%E6%96%B0&logo=github&style=for-the-badge" width="135px"/>
+</a>
 
 <br/>
 <br/>
