@@ -3,7 +3,8 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-
+const oceanicNext = require("prism-react-renderer/themes/oceanicNext");
+const duotoneLight = require("prism-react-renderer/themes/duotoneLight");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Chen's Wiki",
@@ -114,8 +115,20 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Chen's Project, Inc.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: duotoneLight,
+        darkTheme: oceanicNext,
+      },
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 5,
+      },
+      announcementBar: {
+        id: "support_us",
+        content:
+          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+        backgroundColor: "#fafbfc",
+        textColor: "#091E42",
+        isCloseable: false,
       },
     }),
 };
