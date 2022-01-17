@@ -128,7 +128,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="https://github.com/HiChen404/MyWikiSite/tree/master/">this survey</a>',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
