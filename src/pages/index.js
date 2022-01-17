@@ -7,12 +7,12 @@ import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
 import Head from "@docusaurus/Head";
 
-const MySEO = () => (
-  <Head>
-    {/* <title>dfsdfsdf</title> */}
-    <script type="text/javascript" src="../../baidu.js"></script>
-  </Head>
-);
+// const MySEO = () => (
+//   <Head>
+//     {/* <title>dfsdfsdf</title> */}
+//     <script type="text/javascript" src="../../baidu.js"></script>
+//   </Head>
+// );
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -42,7 +42,7 @@ export default function Home() {
       title="Home"
       description="Wiki知识库/vscode/javascript/软件/工具"
     >
-      <MySEO />
+      {/* <MySEO /> */}
       <HomepageHeader />
       <main>
         <HomepageFeatures />
