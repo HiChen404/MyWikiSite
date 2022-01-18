@@ -9,7 +9,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Poppins:wght@500&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Poppins:wght@500&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-
 :root {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
@@ -19,6 +18,8 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+  --site-announcement-bar-stripe-color1: hsl(167deg 68% 85%);
+  --site-announcement-bar-stripe-color2: hsl(167deg 68% 95%);
 }
 
 .docusaurus-highlight-code-line {
@@ -48,10 +49,11 @@ html {
   zoom: 80%;
 } */
 
+/* tg comments */
 #comments-app-27ZP8kvt-1 {
   overflow: auto;
   border: none;
-  height: 566px;
+  height: 186px;
 }
 
 @media screen and (max-width: 767px) {
@@ -89,7 +91,7 @@ blockquote:hover {
 }
 code {
   color: var(--ifm-color-primary);
-  /* font-family: "Noto Sans"; */
+  font-family: "Noto Sans";
 }
 
 .markdown > h2 {
@@ -106,12 +108,35 @@ code {
   border-radius: 1px;
 }
 .markdown img {
-  margin: 1rem 0;
+  display: block;
+  margin: 1rem auto;
 }
 
 img-annotation {
   display: block;
   color: #a9b1bb;
   margin: -1rem 0 1rem;
+  text-align: center;
   font-size: 0.7rem;
+}
+
+p {
+  margin: 15px 0 15px 10px;
+}
+/* 徽章居左 */
+.Badges {
+  display: inline-block !important;
+  margin: 0.5rem 0.3rem !important;
+}
+
+/* 公告栏 */
+div[class^="announcementBar_"] {
+  background: repeating-linear-gradient(
+    35deg,
+    var(--site-announcement-bar-stripe-color1),
+    var(--site-announcement-bar-stripe-color1) 20px,
+    var(--site-announcement-bar-stripe-color2) 10px,
+    var(--site-announcement-bar-stripe-color2) 40px
+  );
+  font-weight: 700;
 }

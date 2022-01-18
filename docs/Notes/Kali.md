@@ -8,7 +8,7 @@ tags: [Kali, Linux]
 
 # Kali 上手指南
 
-![Author](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg)
+<img class="Badges" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"/>
 
 ## Resources
 

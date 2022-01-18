@@ -9,7 +9,7 @@ const duotoneLight = require("prism-react-renderer/themes/duotoneLight");
 const config = {
   title: "Chen's Wiki",
   tagline: "这里是陈晨的知识库，欢迎访问~",
-  url: "https://404Lab.top",
+  url: "https://wiki.404Lab.top",
   baseUrl: "/",
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "warn",
@@ -128,7 +128,7 @@ const config = {
       announcementBar: {
         id: "support_us",
         content:
-          'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="https://github.com/HiChen404/MyWikiSite/tree/master/">this survey</a>',
+          '⭐️We are looking to revamp our docs, please click <a target="_blank" rel="noopener noreferrer" href="https://github.com/HiChen404/MyWikiSite/tree/master/">this link</a> ',
         backgroundColor: "#fafbfc",
         textColor: "#091E42",
         isCloseable: false,
