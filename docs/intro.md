@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-# slug: /
+slug: /
 ---
 
 # About
@@ -30,7 +30,7 @@ This is a shared knowledge base and we look forward to working together to<br/>
 
 complete this knowledge base!
 
-You can also visit this website: [zws](short.404lab.top) to shorten your url.
+You can also visit this website: [zws](https://short.404lab.top) to shorten your url.
 
 Hava fun!
 

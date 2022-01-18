@@ -56,11 +56,11 @@ html {
   height: 186px;
 }
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   #airConditioning {
     display: none;
   }
-}
+} */
 
 /* html[data-theme="dark"] #airConditioning {
   padding-left: 30px;
@@ -89,6 +89,11 @@ blockquote {
 blockquote:hover {
   border-left: 2px solid var(--ifm-color-primary);
 }
+
+html[data-theme="dark"] blockquote {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 code {
   color: var(--ifm-color-primary);
   font-family: "Noto Sans";

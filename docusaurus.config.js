@@ -31,6 +31,7 @@ const config = {
           anonymizeIP: true,
         },
         docs: {
+          routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl: "https://github.com/HiChen404/MyWikiSite/tree/master/",
@@ -40,6 +41,12 @@ const config = {
           // Please change this to your repo.
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+        },
+        pages: {
+          path: "src/pages",
+          routeBasePath: "/home",
+
+          // ... configuration object here
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -61,13 +68,15 @@ const config = {
           {
             type: "doc",
             docId: "intro",
-            position: "left",
+            position: "right",
             label: "Wiki",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/blog", label: "Blog", position: "right" },
+          { to: "/home", label: "Home", position: "right" },
+
           {
             href: "https://404Lab.top",
-            label: "Home",
+            label: "More",
             position: "right",
           },
         ],
@@ -79,8 +88,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Chen's Wiki",
-                to: "/docs/intro",
+                label: "Wiki",
+                to: "/",
               },
             ],
           },
