@@ -142,6 +142,13 @@ const config = {
         textColor: "#091E42",
         isCloseable: false,
       },
+      metadata: [
+        {
+          name: "这是一个共享的知识库(Wiki Database)，内容涉及软件分享，学习笔记(JavaScript,Vue,Python,Go,Flutter,React)，搞机技巧，互联网冲浪技巧等内容",
+          content:
+            "Wiki Database,JavaScript,Vue,Python,Go,Flutter,React,破解,技巧,搞机,知识库,Github,黑客,iOS,iPhone",
+        },
+      ],
     }),
 };
 
