@@ -14,7 +14,7 @@ const config = {
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
+  organizationName: "404Lab", // Usually your GitHub org/user name.
   projectName: "Chen's Wiki", // Usually your repo name.
   i18n: {
     defaultLocale: "en",
@@ -59,10 +59,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Chen's Site",
+        title: "Chen's Wiki",
         logo: {
           alt: "My Site Logo",
-          src: "img/logo.svg",
+          src: "img/favicon.ico",
         },
         items: [
           {
