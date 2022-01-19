@@ -2,7 +2,7 @@
 description: Quantumult X 脚本使用教程
 keywords:
   - Quantumult X
-image: https://i.imgur.com/mErPwqL.png
+image: https://is4-ssl.mzstatic.com/image/thumb/Purple126/v4/65/6d/7c/656d7cb8-2ca2-60af-d29f-ca6d547ae88a/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp
 tags: [Quantumult X]
 ---
 
@@ -11,9 +11,15 @@ tags: [Quantumult X]
 <img class="Badges" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"/>
 <img src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/65/04/d1/6504d15f-eb22-526e-1055-352290c0feb9/pr_source.png/230x0w.webp"/>
 
-> 🚀 TG 频道: https://t.me/EnjoyDigitalLife
+> 🚀 **TG 频道**: https://t.me/EnjoyDigitalLife
 
-Quantumult X 的功能非常强大，但价格也比较昂贵，很多人在购买了 Quantumult X 之后却不不知道该如何使用，那么这篇文章就详细讲解一下 Quantumult X 中 `重写` 和 `MitM` 的用法，也就是我们常说的 **圈 X 脚本**的用法。
+Quantumult X 是功能强大的网络工具，对于我们来说它可以实现 去广告，解锁各大软件 VIP,自动打卡签到，淘宝京东比价 等各种功能。
+
+很多人在购买了 Quantumult X 之后却不不知道该如何使用，发挥不出这个工具的强大优势，那么这篇文章就详细讲解一下 Quantumult X 中 `重写` 和 `MitM` 的用法，也就是我们常说的 **圈 X 脚本**的用法。
+
+> 关于 Quantumult X 的免费获取或购买方式请关注：[🚀 TG 频道](https://t.me/EnjoyDigitalLife)
+>
+> **Quantumult X App Store** : https://apps.apple.com/us/app/quantumult-x/id1443988620
 
 ## 前置知识
 
