@@ -7,7 +7,7 @@ const oceanicNext = require("prism-react-renderer/themes/oceanicNext");
 const duotoneLight = require("prism-react-renderer/themes/duotoneLight");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Chen's Wiki",
+  title: "数字生活 DigitalLife",
   tagline: "这里是陈晨的知识库，欢迎访问~",
   url: "https://wiki.404Lab.top",
   baseUrl: "/",
@@ -59,7 +59,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Chen's Wiki",
+        title: "404Lab Wiki",
         logo: {
           alt: "My Site Logo",
           src: "img/favicon.ico",
