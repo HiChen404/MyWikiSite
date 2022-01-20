@@ -2,7 +2,7 @@
 description: VSCode 指南
 keywords:
   - vscode
-image: https://i.imgur.com/mErPwqL.png
+image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-28-23-404Lab.jpeg
 tags: [编程, vscode，软件]
 ---
 
@@ -67,4 +67,10 @@ javac -encoding utf-8 *.java
 
 ```json
 "git.path":"D:\\Git\\bin\\git.exe"   //git 的目录
+```
+
+## 5. 快速删除空行
+
+```
+^\s*$\n
 ```

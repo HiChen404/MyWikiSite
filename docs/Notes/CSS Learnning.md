@@ -2,7 +2,7 @@
 description: CSS 学习笔记
 keywords:
   - css
-image: https://i.imgur.com/mErPwqL.png
+image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-28-23-404Lab.jpeg
 tags: [编程, CSS]
 ---
 
