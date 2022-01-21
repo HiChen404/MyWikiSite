@@ -1,29 +1,3 @@
----
-sidebar_position: 1
-description: 这是一个共享的知识库(Wiki Database)，内容涉及软件分享，学习笔记(JavaScript,Vue,Python,Go,Flutter,React)，搞机技巧，互联网冲浪技巧等内容。
-image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-28-23-404Lab.jpeg
-keywords:
-  [
-    Wiki Database,
-    JavaScript,
-    Vue,
-    Python,
-    Go,
-    Flutter,
-    React,
-    破解,
-    技巧,
-    搞机,
-    知识库,
-    Github,
-    黑客,
-    iOS,
-    iPhone,
-  ]
-slug: /
-title: 互联网冲浪指南
----
-
 # About
 
 <a href="https://github.com/HiChen404/MyWikiSite">
@@ -51,7 +25,7 @@ This is a shared knowledge base and we look forward to working together to<br/>
 
 complete this knowledge base!
 
-You can also visit this website: [zws](https://short.404lab.top) to shorten your url.
+You can also visit this website: [ZWS](https://zws.404lab.top) to shorten your url with invisible spaces.
 
 Hava fun!
 
@@ -72,8 +46,6 @@ Contact me by:
 <!-- ![](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109051029424.jpeg) -->
 <img class="Badges" alt="404lab" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109050953203.png" width="50%"/>
 
-<iframe id="comments-app-27ZP8kvt-1" src="https://comments.app/embed/view?website=27ZP8kvt&amp;page_url=http://wiki.404lab.top/index.html&amp;origin=http://wiki.404lab.top&amp;page_title=Document&amp;limit=5" width="90%" height="auto" ></iframe>
+## Website
 
-# Website
-
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This website is built using Docusaurus 2, a modern static website generator.
