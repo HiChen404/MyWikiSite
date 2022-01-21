@@ -51,7 +51,7 @@ This is a shared knowledge base and we look forward to working together to<br/>
 
 complete this knowledge base!
 
-You can also visit this website: [zws](https://short.404lab.top) to shorten your url.
+You can also visit this website: [ZWS](https://zws.404lab.top) to shorten your url with invisible spaces.
 
 Hava fun!
 

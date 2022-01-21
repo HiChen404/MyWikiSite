@@ -9,7 +9,7 @@ tags: [Quantumult X]
 # Quantumult X 脚本使用教程
 
 <img class="Badges" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"/>
-<img src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/65/04/d1/6504d15f-eb22-526e-1055-352290c0feb9/pr_source.png/230x0w.webp"/>
+<img src="https://is2-ssl.mzstatic.com/image/thumb/Purple113/v4/65/04/d1/6504d15f-eb22-526e-1055-352290c0feb9/pr_source.png/230x0w.webp" width="20%"/>
 
 > 🚀 **TG 频道**: https://t.me/EnjoyDigitalLife
 
