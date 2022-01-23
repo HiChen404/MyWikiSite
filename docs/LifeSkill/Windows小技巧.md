@@ -7,7 +7,7 @@ keywords:
   - 互联网
   - Windows
 image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-28-23-404Lab.jpeg
-tags: [Windows]
+tags: [Windows, Skill]
 ---
 
 # Windows 小技巧
