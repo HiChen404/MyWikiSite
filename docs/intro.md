@@ -43,7 +43,7 @@ title: 互联网冲浪指南
 
 > 🚀**本文档持续更新中...**
 
-## Biography
+## 🖐 Biography
 
 Hi there 👋 This is [404Lab](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw) !
 
@@ -55,7 +55,19 @@ You can also visit this website: [ZWS](https://zws.404lab.top) to shorten your u
 
 Hava fun!
 
-## Contact
+## ✨ Tips
+
+由于图片不支持 **点击查看大图**，建议配合浏览器插件实现 **📸 查看大图** 功能。
+
+插件推荐:
+
+- [Imagus](https://microsoftedge.microsoft.com/addons/detail/imagus/elledlbkiggfdkllaphjkmaemdfpdkja) ⭐⭐⭐⭐⭐
+
+- [Photo Zoom Plus](https://chrome.google.com/webstore/detail/photo-zoom-plus/mgliikamgjonfkmdljhkpbcfjnndoojh) ⭐⭐⭐⭐
+
+- [PhotoShow](https://chrome.google.com/webstore/detail/photoshow/mgpdnhlllbpncjpgokgfogidhoegebod) ⭐⭐⭐⭐⭐
+
+## 📱 Contact
 
  <a href="mailto:Hi@404Lab.top">
 <img class="Badges" alt="404lab" src="https://img.shields.io/badge/Email-Hi%40404Lab.top-blue/?logo=Mail.Ru&color=13c2c2&labelColor=f5f5f5&logoColor=blue"/>
