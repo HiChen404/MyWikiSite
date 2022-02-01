@@ -68,7 +68,7 @@ const config = {
         indexName: "wiki-404lab-top",
 
         // Optional: see doc section below
-        contextualSearch: true,
+        // contextualSearch: true,
       },
 
       navbar: {
