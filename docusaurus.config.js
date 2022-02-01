@@ -17,7 +17,7 @@ const config = {
   organizationName: "404Lab", // Usually your GitHub org/user name.
   projectName: "Chen's Wiki", // Usually your repo name.
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "zh-cn",
     locales: ["zh-cn"],
   },
 
@@ -68,7 +68,7 @@ const config = {
         indexName: "wiki-404lab-top",
 
         // Optional: see doc section below
-        contextualSearch: true,
+        // contextualSearch: true,
       },
 
       navbar: {
