@@ -18,7 +18,7 @@ const config = {
   projectName: "Chen's Wiki", // Usually your repo name.
   i18n: {
     defaultLocale: "en",
-    locales: ["en", "zh-cn"],
+    locales: ["zh-cn"],
   },
 
   presets: [
@@ -58,6 +58,19 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        // The application ID provided by Algolia
+        appId: "L4NYMVDYG7",
+
+        // Public API key: it is safe to commit it
+        apiKey: "2dc197c65a9a3bc16515f64933bb50b5",
+
+        indexName: "wiki-404lab-top",
+
+        // Optional: see doc section below
+        contextualSearch: true,
+      },
+
       navbar: {
         title: "404Lab Wiki",
         logo: {
