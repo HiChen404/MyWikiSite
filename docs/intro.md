@@ -47,11 +47,11 @@ title: 互联网冲浪指南
 
 Hi there 👋 This is [404Lab](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw) !
 
-This is a shared knowledge base and we look forward to working together to<br/>
+这是我的知识仓库，它同时也是一个共享的知识库!<br/>
 
-complete this knowledge base!
+我们可以一起在这里记录与分享知识!
 
-You can also visit this website: [ZWS](https://zws.404lab.top) to shorten your url with invisible spaces.
+你还可以访问这个网站: [ZWS](https://zws.404lab.top) 它可以使用零宽字符缩短任一网址!
 
 Hava fun!
 
