@@ -53,7 +53,9 @@ Hi there 👋 This is [404Lab](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw
 
 你还可以访问这个网站: [ZWS](https://zws.404lab.top) 它可以使用零宽字符缩短任一网址!
 
-Hava fun!
+遇到问题你可以在页面底部使用 Telegram 账号进行留言！
+
+Have fun!
 
 ## ✨ Tips
 
