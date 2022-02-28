@@ -82,10 +82,10 @@ const config = {
             type: "doc",
             docId: "intro",
             position: "right",
-            label: "Wiki",
+            label: "📗Wiki",
           },
-          { to: "/blog", label: "Blog", position: "right" },
-          { to: "/home", label: "Home", position: "right" },
+          { to: "/blog", label: "👨🏻‍💻Blog", position: "right" },
+          { to: "/home", label: "🏡Home", position: "right" },
 
           {
             href: "https://404Lab.top",

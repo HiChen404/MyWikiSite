@@ -51,9 +51,9 @@ Hi there 👋 This is [404Lab](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw
 
 我们可以一起在这里记录与分享知识!
 
-你还可以访问这个网站: [ZWS](https://zws.404lab.top) 它可以使用零宽字符缩短任一网址。
-
 遇到问题你可以在页面底部使用 Telegram 账号进行留言。
+
+你还可以试试这个工具: [ZWS 零宽字符短网址](https://zws.404lab.top)
 
 Have fun!
 
@@ -87,3 +87,7 @@ Contact me by:
 <img class="Badges" alt="404lab" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109050953203.png" width="50%"/>
 
 <iframe id="comments-app-27ZP8kvt-1" src="https://comments.app/embed/view?website=27ZP8kvt&amp;page_url=http://wiki.404lab.top/index.html&amp;origin=http://wiki.404lab.top&amp;page_title=Document&amp;limit=5" width="90%" height="auto" ></iframe>
+
+## 🐞 已知问题
+
+- Alogia 集成出现 bug , 搜索功能可能出现问题。
