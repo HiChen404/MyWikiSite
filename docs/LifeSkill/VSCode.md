@@ -74,3 +74,24 @@ javac -encoding utf-8 *.java
 ```
 ^\s*$\n
 ```
+
+## 6. React JSX 开启 HTML 标签提示
+
+在 Emmet 插件设置的 includeLanguages 属性中添加 `jsx` 支持。
+
+> Emmet includeLanguages: 在默认不受支持的语言中启用 Emmet 缩写。在此语言和 Emmet 支持的语言之间添加映射。
+> 例如: {"vue-html": "html", "javascript": "javascriptreact"}
+
+```json
+ "emmet.includeLanguages":{
+      "javascript":"javascriptreact"
+  }
+```
+
+同理微信小程序 `wxml` 中也可添加 HTML 标签提示。
+
+```json
+"emmet.includeLanguages":{
+  "wxml":"html"
+}
+```
