@@ -122,3 +122,9 @@ Windows Registry Editor Version 5.00
 "IsolatedCommand"="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
 
 ```
+
+## 查看 WIFI MAC 与 SSID 地址
+
+```powershell
+netsh wlan show interfaces
+```

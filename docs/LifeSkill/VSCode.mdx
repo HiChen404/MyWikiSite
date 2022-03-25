@@ -6,9 +6,14 @@ image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-
 tags: [编程, vscode，软件]
 ---
 
+import { Highlight } from "@site/src/components/MyMDX"
+
 # VSCode 配置指南
 
-<img class="Badges" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"/>
+<img
+  class="Badges"
+  src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"
+/>
 
 ## 1. 开启字体连字
 
@@ -94,4 +99,31 @@ javac -encoding utf-8 *.java
 "emmet.includeLanguages":{
   "wxml":"html"
 }
+```
+
+## 7. 代码自定义区域折叠
+
+在 VS code 中，代码不仅可以使用其语法格式进行折叠，还可以<Highlight color="#25c2a0">自定义区域折叠！</Highlight>
+
+```jsx title=" React: ./index.js"
+const styles = StyleSheet.create({
+  //highlight-next-line
+  //被 //#region 与 //#endregion 包裹的区域可进行折叠！
+
+  //highlight-next-line
+  //#region Header
+  headerWrapper:{...},
+  headerTitle:{...},
+  headerText:{...},
+  //highlight-next-line
+  //#endregion
+
+  //highlight-next-line
+  //#region Footer
+  footerWrapper:{...},
+  footerTitle:{...},
+  footerText:{...},
+  //highlight-next-line
+  //#endregion
+})
 ```
