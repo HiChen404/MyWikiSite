@@ -1,0 +1,56 @@
+---
+description: MDX 指南
+keywords:
+  - MDX,MD,Markdown
+image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-28-23-404Lab.jpeg
+tags: [编程, vscode，软件, MDX]
+---
+
+import { Highlight } from "../../src/components/MyMDX"
+
+<img
+  class="Badges"
+  src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"
+/>
+<img
+  class="Badges"
+  src="https://api.netlify.com/api/v1/badges/62b2ea8d-7e62-49d1-bb5a-b507b01377af/deploy-status"
+/>
+
+# Get Start
+
+### Docusaurus 中定义一个<Highlight color="#25c2a0">高亮语法</Highlight>模块
+
+创建一个高亮组件，并导出。
+
+```jsx title="@site/src/components/MyMDX.js"
+import React from "react"
+
+export default function Highlight({ children, color }) {
+  return (
+    <span
+      style={{
+        backgroundColor: color,
+        borderRadius: "2px",
+        color: "#fff",
+        padding: "0.2rem",
+      }}>
+      {children}
+    </span>
+  )
+}
+```
+
+在 MDX 或 MD 文件中引入，并使用。
+
+```mdx
+import { Highlight } from "@src/components/MyMDX"
+
+这句话使用了<Highlight color="#1877F2"> MDX 高亮组件</Highlight>。
+```
+
+##### 🎈 效果如下：
+
+这句话使用了<Highlight color="#1877F2"> MDX 高亮组件</Highlight>。
+
+> 官方文档:https://docusaurus.io/zh-CN/docs/markdown-features/react
