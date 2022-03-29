@@ -8,10 +8,8 @@ tags: [编程, vscode，软件]
 
 import { Highlight } from "@site/src/components/MyMDX"
 
-# VSCode 配置指南
-
 <img
-  class="Badges"
+  className="Badges"
   src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"
 />
 
@@ -127,3 +125,19 @@ const styles = StyleSheet.create({
   //#endregion
 })
 ```
+
+## 8. 视觉效果(提体验感)
+
+VSCode 支持自定义 `Cursor Blinking` (光标) 的动画样式,可选项为:
+
+&nbsp;<Highlight color="#25c2a0">blink(default)</Highlight>
+&nbsp;<Highlight color="#25c2a0">smooth</Highlight>
+&nbsp;<Highlight color="#25c2a0">phase</Highlight>
+&nbsp;<Highlight color="#25c2a0">solid</Highlight>
+&nbsp;<Highlight color="#25c2a0">expand</Highlight>
+
+其中我比较喜欢类似于呼吸的 `smooth` 效果。
+
+当然，光标的样式也可自定义，你可以在 `设置`->`光标` 中查看所有的配置项。
+
+还有一个有意思的设置，你可以开启&nbsp;<Highlight color="#25c2a0">光标平滑移动效果</Highlight>，让视觉效果更加丝滑。
