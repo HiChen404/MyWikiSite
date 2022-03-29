@@ -6,12 +6,10 @@ image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-
 tags: [编程, JS]
 ---
 
-# JavaScript 学习笔记
-
 <!-- # <img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"><img src="https://api.netlify.com/api/v1/badges/62b2ea8d-7e62-49d1-bb5a-b507b01377af/deploy-status"><img src="https://badgen.net/github/stars/CyC2018/CS-Notes?icon=github&color=4ab8a1" alt=""> -->
 
-<img class="Badges" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"/>
-<img class="Badges" src="https://api.netlify.com/api/v1/badges/62b2ea8d-7e62-49d1-bb5a-b507b01377af/deploy-status"/>
+<img className="Badges" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"/>
+<img className="Badges" src="https://api.netlify.com/api/v1/badges/62b2ea8d-7e62-49d1-bb5a-b507b01377af/deploy-status"/>
 
 > 💡 🚀 ✔️ 🕝 ☢️ ☣️
 >
@@ -28,10 +26,10 @@ tags: [编程, JS]
 数组中任何类型的元素（数值，字符串，甚至是数组）都可以被弹出来 。
 
 ```js
-var threeArr = [1, 4, 6];
-var oneDown = threeArr.pop();
-console.log(oneDown);
-console.log(threeArr);
+var threeArr = [1, 4, 6]
+var oneDown = threeArr.pop()
+console.log(oneDown)
+console.log(threeArr)
 ```
 
 第一个 `console.log` 将显示值 `6`，第二个将显示值 `[1, 4]`。
@@ -45,8 +43,8 @@ console.log(threeArr);
 示例：
 
 ```js
-var ourArray = ["Stimpson", "J", ["cat"]];
-var removedFromOurArray = ourArray.shift();
+var ourArray = ["Stimpson", "J", ["cat"]]
+var removedFromOurArray = ourArray.shift()
 ```
 
 `removedFromOurArray`值为`Stimpson`，`ourArray`值为`["J", ["cat"]]`
@@ -60,9 +58,9 @@ var removedFromOurArray = ourArray.shift();
 示例：
 
 ```js
-var ourArray = ["Stimpson", "J", "cat"];
-ourArray.shift();
-ourArray.unshift("Happy");
+var ourArray = ["Stimpson", "J", "cat"]
+ourArray.shift()
+ourArray.unshift("Happy")
 ```
 
 在 `shift`、`ourArray` 后值为 `["J", "cat"]`。 在 `unshift`、`ourArray` 后值为 `["Happy", "J", "cat"]`。
@@ -78,8 +76,8 @@ ourArray.unshift("Happy");
 **提示** 在 JavaScript 中，你可以使用 `typeof` 运算符确定变量或值的类型，如下所示：
 
 ```js
-typeof 3;
-typeof "3";
+typeof 3
+typeof "3"
 ```
 
 `typeof 3` 返回字符串 `number`，`typeof '3'` 返回字符串 `string`。
@@ -97,10 +95,10 @@ var myObj = {
   "Space Name": "Kirk",
   "More Space": "Spock",
   NoSpace: "USS Enterprise",
-};
-myObj["Space Name"];
-myObj["More Space"];
-myObj["NoSpace"];
+}
+myObj["Space Name"]
+myObj["More Space"]
+myObj["NoSpace"]
 ```
 
 `myObj["Space Name"]` 将会是字符串 `Kirk`，`myObj['More Space']` 将会是字符串 `Spock`，并且`myObj["NoSpace"]` 将会是字符串 `USS Enterprise`。
@@ -112,9 +110,9 @@ myObj["NoSpace"];
 `trim()`方法返回一个两头都去掉空白的字符串，并不影响原字符串本身。
 
 ```js
-var data = "   1  ";
-var res = data.trim();
-console.log(res);
+var data = "   1  "
+var res = data.trim()
+console.log(res)
 ```
 
 `res`的结果将会是 "`1`"
@@ -126,7 +124,7 @@ console.log(res);
 如果 `String = " 1 " ` (包含 n 个空格),则 `!String.trim() = false`
 
 ```js
-var res = !input || !input.trim();
+var res = !input || !input.trim()
 //若输入为 空 或 全为空格,则 res 值为 true
 ```
 
@@ -139,10 +137,10 @@ var arr = [
   [1, 2],
   [3, 4],
   [5, 6],
-];
+]
 for (var i = 0; i < arr.length; i++) {
   for (var j = 0; j < arr[i].length; j++) {
-    console.log(arr[i][j]); //输出了 `arr` 中的每个子元素
+    console.log(arr[i][j]) //输出了 `arr` 中的每个子元素
   }
 }
 ```
@@ -157,11 +155,11 @@ for (var i = 0; i < arr.length; i++) {
 
 ```js
 function multiply(arr, n) {
-  var product = 1;
+  var product = 1
   for (var i = 0; i < n; i++) {
-    product *= arr[i];
+    product *= arr[i]
   }
-  return product;
+  return product
 }
 ```
 
@@ -170,9 +168,9 @@ function multiply(arr, n) {
 ```js
 function multiply(arr, n) {
   if (n <= 0) {
-    return 1;
+    return 1
   } else {
-    return multiply(arr, n - 1) * arr[n - 1];
+    return multiply(arr, n - 1) * arr[n - 1]
   }
 }
 ```
@@ -194,14 +192,14 @@ function multiply(arr, n) {
 ```javascript
 function countup(n) {
   if (n < 1) {
-    return [];
+    return []
   } else {
-    const countArray = countup(n - 1);
-    countArray.push(n);
-    return countArray;
+    const countArray = countup(n - 1)
+    countArray.push(n)
+    return countArray
   }
 }
-console.log(countup(5));
+console.log(countup(5))
 ```
 
 值 `[1, 2, 3, 4, 5]` 将显示在控制台中。
@@ -217,12 +215,12 @@ console.log(countup(5));
 ```js
 function countdown(n) {
   if (n < 1) {
-    return [];
+    return []
   } else {
-    const countArray = countdown(n - 1);
-    countArray.unshift(n);
+    const countArray = countdown(n - 1)
+    countArray.unshift(n)
 
-    return countArray;
+    return countArray
   }
 }
 ```
@@ -233,16 +231,16 @@ function countdown(n) {
 
 ```js
 function rangeOfNumbers(startNum, endNum) {
-  let n = endNum - startNum;
+  let n = endNum - startNum
   if (n < 0) {
-    return [];
+    return []
   } else {
-    const countArray = rangeOfNumbers(startNum, endNum - 1);
-    countArray.push(endNum);
-    return countArray;
+    const countArray = rangeOfNumbers(startNum, endNum - 1)
+    countArray.push(endNum)
+    return countArray
   }
 }
-console.log(rangeOfNumbers(1, 5)); // (5) [1, 2, 3, 4, 5]
+console.log(rangeOfNumbers(1, 5)) // (5) [1, 2, 3, 4, 5]
 ```
 
 ### 9. 测试对象的属性
@@ -255,9 +253,9 @@ console.log(rangeOfNumbers(1, 5)); // (5) [1, 2, 3, 4, 5]
 var myObj = {
   top: "hat",
   bottom: "pants",
-};
-myObj.hasOwnProperty("top");
-myObj.hasOwnProperty("middle");
+}
+myObj.hasOwnProperty("top")
+myObj.hasOwnProperty("middle")
 ```
 
 第一个 `hasOwnProperty` 返回 `true`，第二个返回 `false`。
@@ -279,7 +277,7 @@ myObj.hasOwnProperty("middle");
 `parseInt()` 函数解析一个字符串返回一个整数。 下面是一个示例：
 
 ```js
-var a = parseInt("007");
+var a = parseInt("007")
 ```
 
 上述函数将字符串 `007` 转换为整数 `7`。 如果字符串中的第一个字符不能转换为数字，则返回 `NaN`。
@@ -291,13 +289,13 @@ var a = parseInt("007");
 函数调用如下所示：
 
 ```js
-parseInt(string, radix);
+parseInt(string, radix)
 ```
 
 这是一个示例：
 
 ```js
-var a = parseInt("11", 2);
+var a = parseInt("11", 2)
 ```
 
 变量 radix 表示 `11` 是在二进制系统中。 这个示例将字符串 `11` 转换为整数 `3`。
@@ -327,15 +325,15 @@ var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
 `reduce()` 方法对数组中的每个元素执行一个由您提供的**reducer**函数(升序执行)，将其结果汇总为单个返回值。
 
 ```js
-const array1 = [1, 2, 3, 4];
-const reducer = (previousValue, currentValue) => previousValue + currentValue;
+const array1 = [1, 2, 3, 4]
+const reducer = (previousValue, currentValue) => previousValue + currentValue
 
 // 1 + 2 + 3 + 4
-console.log(array1.reduce(reducer));
+console.log(array1.reduce(reducer))
 // expected output: 10
 
 // 5 + 1 + 2 + 3 + 4
-console.log(array1.reduce(reducer, 5));
+console.log(array1.reduce(reducer, 5))
 // expected output: 15
 ```
 
@@ -349,15 +347,15 @@ arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue]
 
 ```js
 var sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {
-  return accumulator + currentValue;
-}, 0);
+  return accumulator + currentValue
+}, 0)
 // 和为 6
 ```
 
 你也可以写成箭头函数的形式：
 
 ```js
-var total = [0, 1, 2, 3].reduce((acc, cur) => acc + cur, 0);
+var total = [0, 1, 2, 3].reduce((acc, cur) => acc + cur, 0)
 ```
 
 ### 15. 数组合并方法
@@ -367,31 +365,31 @@ var total = [0, 1, 2, 3].reduce((acc, cur) => acc + cur, 0);
 #### (2) Array.Push() 循环添加
 
 ```javascript
-const array1 = [1, 2, 3, 4, 5];
-const array2 = ["a", "b", "c", "d", "e"];
+const array1 = [1, 2, 3, 4, 5]
+const array2 = ["a", "b", "c", "d", "e"]
 
 var mergeArray = function (array1, array2) {
   for (let i = 0; i < array2.length; i++) {
-    array1.push(array2[i]);
+    array1.push(array2[i])
   }
-  console.log(array1);
-};
+  console.log(array1)
+}
 
-mergeArray(array1, array2); //输出结果为 [1, 2, 3, 4, 5, 'a', 'b', 'c', 'd', 'e']
+mergeArray(array1, array2) //输出结果为 [1, 2, 3, 4, 5, 'a', 'b', 'c', 'd', 'e']
 ```
 
 #### (3) 扩展运算符
 
 ```js
-const array1 = [1, 2, 3, 4, 5];
-const array2 = ["a", "b", "c", "d", "e"];
+const array1 = [1, 2, 3, 4, 5]
+const array2 = ["a", "b", "c", "d", "e"]
 
 var mergeArray = function (array1, array2) {
-  var array3 = [...array1, ...array2];
-  console.log(array3);
-};
+  var array3 = [...array1, ...array2]
+  console.log(array3)
+}
 
-mergeArray(array1, array2); //输出结果为 [1, 2, 3, 4, 5, 'a', 'b', 'c', 'd', 'e']
+mergeArray(array1, array2) //输出结果为 [1, 2, 3, 4, 5, 'a', 'b', 'c', 'd', 'e']
 ```
 
 ### 16. [encodeURIComponent()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) 转义
@@ -410,20 +408,20 @@ mergeArray(array1, array2); //输出结果为 [1, 2, 3, 4, 5, 'a', 'b', 'c', 'd'
 `encodeURIComponent()` 和 **`encodeURI`** 有以下几个不同点：
 
 ```javascript
-var set1 = ";,/?:@&=+$"; // 保留字符
-var set2 = "-_.!~*'()"; // 不转义字符
-var set3 = "#"; // 数字标志
-var set4 = "ABC abc 123"; // 字母数字字符和空格
+var set1 = ";,/?:@&=+$" // 保留字符
+var set2 = "-_.!~*'()" // 不转义字符
+var set3 = "#" // 数字标志
+var set4 = "ABC abc 123" // 字母数字字符和空格
 
-console.log(encodeURI(set1)); // ;,/?:@&=+$
-console.log(encodeURI(set2)); // -_.!~*'()
-console.log(encodeURI(set3)); // #
-console.log(encodeURI(set4)); // ABC%20abc%20123 (the space gets encoded as %20)
+console.log(encodeURI(set1)) // ;,/?:@&=+$
+console.log(encodeURI(set2)) // -_.!~*'()
+console.log(encodeURI(set3)) // #
+console.log(encodeURI(set4)) // ABC%20abc%20123 (the space gets encoded as %20)
 
-console.log(encodeURIComponent(set1)); // %3B%2C%2F%3F%3A%40%26%3D%2B%24
-console.log(encodeURIComponent(set2)); // -_.!~*'()
-console.log(encodeURIComponent(set3)); // %23
-console.log(encodeURIComponent(set4)); // ABC%20abc%20123 (the space gets encoded as %20)
+console.log(encodeURIComponent(set1)) // %3B%2C%2F%3F%3A%40%26%3D%2B%24
+console.log(encodeURIComponent(set2)) // -_.!~*'()
+console.log(encodeURIComponent(set3)) // %23
+console.log(encodeURIComponent(set4)) // ABC%20abc%20123 (the space gets encoded as %20)
 ```
 
 ### 17. Array.prototype.every()
@@ -460,10 +458,10 @@ arr.every(callback[, thisArg])
 
 ```js
 function isBigEnough(element, index, array) {
-  return element >= 10;
+  return element >= 10
 }
-[12, 5, 8, 130, 44].every(isBigEnough); // false
-[12, 54, 18, 130, 44].every(isBigEnough); // true
+;[12, 5, 8, 130, 44].every(isBigEnough) // false
+;[12, 54, 18, 130, 44].every(isBigEnough) // true
 ```
 
 ### 18. Array.prototype.some() 可从数组中找元素
@@ -500,11 +498,11 @@ arr.some(callback(element[, index[, array]])[, thisArg])
 
 ```js
 function isBiggerThan10(element, index, array) {
-  return element > 10;
+  return element > 10
 }
 
-[2, 5, 8, 1, 4].some(isBiggerThan10); // false
-[12, 5, 8, 1, 4].some(isBiggerThan10); // true
+;[2, 5, 8, 1, 4].some(isBiggerThan10) // false
+;[12, 5, 8, 1, 4].some(isBiggerThan10) // true
 ```
 
 ### 19. `Number.isInteger()`
@@ -532,19 +530,19 @@ Number.isInteger(value)
 #### 示例
 
 ```js
-Number.isInteger(0); // true
-Number.isInteger(1); // true
-Number.isInteger(-100000); // true
+Number.isInteger(0) // true
+Number.isInteger(1) // true
+Number.isInteger(-100000) // true
 
-Number.isInteger(0.1); // false
-Number.isInteger(Math.PI); // false
+Number.isInteger(0.1) // false
+Number.isInteger(Math.PI) // false
 
-Number.isInteger(Infinity); // false
-Number.isInteger(-Infinity); // false
-Number.isInteger("10"); // false
-Number.isInteger(true); // false
-Number.isInteger(false); // false
-Number.isInteger([1]); // false
+Number.isInteger(Infinity) // false
+Number.isInteger(-Infinity) // false
+Number.isInteger("10") // false
+Number.isInteger(true) // false
+Number.isInteger(false) // false
+Number.isInteger([1]) // false
 ```
 
 ### 20. 表格项筛选
@@ -555,8 +553,8 @@ https://element.eleme.cn/#/zh-CN/component/table
 
 ```js
 userList.filter(
-  (item) => !search || item.name.toLowerCase().includes(search.toLowerCase())
-);
+  item => !search || item.name.toLowerCase().includes(search.toLowerCase())
+)
 //userList为一个数组对象
 ```
 
@@ -605,7 +603,7 @@ isOperator(character){
 
 ```js
 for (let user in users) {
-  console.log(user);
+  console.log(user)
 }
 ```
 
@@ -634,7 +632,7 @@ for (let user in users) {
 - 静态 `String.fromCharCode()` 方法返回由指定的 UTF-16 代码单元序列创建的字符串.
 
   ```js
-  console.log(String.fromCharCode(89, 80, 110, 111));
+  console.log(String.fromCharCode(89, 80, 110, 111))
 
   // expected output: "YPno"
   ```
@@ -642,15 +640,15 @@ for (let user in users) {
 - `charCodeAt()` 方法返回 0 到 65535 之间的整数
 
   ```js
-  const sentence = "The quick brown fox jumps over the lazy dog.";
+  const sentence = "The quick brown fox jumps over the lazy dog."
 
-  const index = 4;
+  const index = 4
 
   console.log(
     `The character code ${sentence.charCodeAt(
       index
     )} is equal to ${sentence.charAt(index)}`
-  );
+  )
 
   // expected output: "The character code 113 is equal to q"
   ```
@@ -664,10 +662,10 @@ for (let user in users) {
 如下的例子在一个不含 `bar` 成员的 Map 中查找 `bar` 成员的 `name` 属性，因此结果是 `undefined`。
 
 ```js
-let myMap = new Map();
-myMap.set("foo", { name: "baz", desc: "inga" });
+let myMap = new Map()
+myMap.set("foo", { name: "baz", desc: "inga" })
 
-let nameBar = myMap.get("bar")?.name;
+let nameBar = myMap.get("bar")?.name
 ```
 
 ### 27. 空值合并运算符
@@ -680,25 +678,25 @@ let nameBar = myMap.get("bar")?.name;
 //使用:
 
 if ((value ?? "") === "") {
-  console.log("isNull");
+  console.log("isNull")
 } else {
-  console.log("hasValue");
+  console.log("hasValue")
 }
 
 //取代：
 
 if (value !== null && value !== undefined && value !== "") {
-  console.log("hasValue");
+  console.log("hasValue")
 } else {
-  console.log("isNull");
+  console.log("isNull")
 }
 ```
 
 ### 28.Set()
 
 ```js
-let arr = [1, 2, 3, 4, 5, 8, 9, 0, 0];
-let arr2 = [3, 5, 5, 7];
+let arr = [1, 2, 3, 4, 5, 8, 9, 0, 0]
+let arr2 = [3, 5, 5, 7]
 
 //1.数组去重
 // let result = [...new Set(arr)];
@@ -778,8 +776,8 @@ element.insertAdjacentHTML(position, text);
 **例子:**
 
 ```js
-let html = "<li><span>测试3</span><span>X</span></li>";
-ul.insertAdjacentHTML("beforeend", html);
+let html = "<li><span>测试3</span><span>X</span></li>"
+ul.insertAdjacentHTML("beforeend", html)
 ```
 
 ### 2. 删除元素节点
@@ -791,7 +789,7 @@ ul.insertAdjacentHTML("beforeend", html);
 #### 1.1 默认导出
 
 ```js
-let n1 = 10; //定义模块私有成员 n1
+let n1 = 10 //定义模块私有成员 n1
 
 function show() {} //定义模块私有方法 shallowReactive
 
@@ -799,7 +797,7 @@ export default {
   //使用 export default 默认导出语法,向外共享 n1 和 show 两个成员
   n1,
   show,
-};
+}
 ```
 
 #### 1.2 按需导入
@@ -807,9 +805,9 @@ export default {
 `test.js`
 
 ```js
-export let s1 = "111";
+export let s1 = "111"
 
-export let s2 = "ccc";
+export let s2 = "ccc"
 
 export function say() {}
 ```
@@ -817,9 +815,9 @@ export function say() {}
 `index.js`
 
 ```js
-import { s1, say } from "./text.js";
+import { s1, say } from "./text.js"
 
-console.log(s1); //输出结果为 "111"
+console.log(s1) //输出结果为 "111"
 ```
 
 #### 1.3
