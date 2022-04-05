@@ -82,12 +82,19 @@ blockquote {
   transition: all 0.5s ease-in-out;
   /* background: var(--ifm-color-primary-lighter); */
   /* border-bottom: #25c2a0 1px solid; */
-  background-color: #f8f8f8;
-  padding: 7px 10px;
+  background-color: #f8f8f9;
+  font-size: 0.9em;
+  border-image-source: linear-gradient(to left, #8f41e9, #f8f8f8);
+  box-shadow: 1px 1px 5px 5px rgba(139, 138, 138, 0.01);
+  padding: 5px 10px;
   margin: 10px 0;
+  border-radius: 5px;
 }
 blockquote:hover {
-  border-left: 2px solid var(--ifm-color-primary);
+  /* border-left: 2px solid var(--ifm-color-primary); */
+  border-image-source: linear-gradient(to left, #8f41e9, var(--ifm-color-primary));
+  border-image-slice: 1;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0);
 }
 
 html[data-theme="dark"] blockquote {
