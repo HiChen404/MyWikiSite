@@ -140,8 +140,10 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Chen's Project, Inc.`,
       },
       prism: {
-        theme: duotoneLight,
+        theme: lightCodeTheme,
         darkTheme: oceanicNext,
+        // theme: duotoneLight,
+        // darkTheme: oceanicNext,
       },
       tableOfContents: {
         minHeadingLevel: 2,
