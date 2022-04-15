@@ -2,24 +2,7 @@
 sidebar_position: 1
 description: 这是一个共享的知识库(Wiki Database)，内容涉及软件分享，学习笔记(JavaScript,Vue,Python,Go,Flutter,React)，搞机技巧，互联网冲浪技巧等内容。
 image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-28-23-404Lab.jpeg
-keywords:
-  [
-    Wiki Database,
-    JavaScript,
-    Vue,
-    Python,
-    Go,
-    Flutter,
-    React,
-    破解,
-    技巧,
-    搞机,
-    知识库,
-    Github,
-    黑客,
-    iOS,
-    iPhone,
-  ]
+keywords: [Wiki Database, JavaScript, Vue, Python, Go, Flutter, React, 破解, 技巧, 搞机, 知识库, Github, 黑客, iOS, iPhone]
 slug: /
 title: 互联网冲浪指南
 ---
@@ -33,6 +16,7 @@ title: 互联网冲浪指南
 </a> <a href="https://www.zhihu.com/people/li-kang-ning">
 
  <img alt="404lab" className="Badges" src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E%E6%94%B6%E8%97%8F-54,547%E6%AC%A1-blue/?logo=zhihu&labelColor=e6f7ff&color=blue"/>
+ <img alt="views" className="Badges" src="https://nextjs-view-counter-lilac.vercel.app/api/counter"/>
 
 </a>
 
