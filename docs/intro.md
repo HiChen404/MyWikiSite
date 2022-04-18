@@ -7,6 +7,8 @@ slug: /
 title: 互联网冲浪指南
 ---
 
+import { Highlight } from "../src/components/MyMDX"
+
 <a href="https://github.com/HiChen404/MyWikiSite">
 <img alt="github" className="Badges" src="https://img.shields.io/github/last-commit/HiChen404/MyWikiSite?label=%E4%B8%8A%E6%AC%A1%E6%9B%B4%E6%96%B0&logo=github&style=for-the-badge" width="135px"/>
 </a> <a href="https://404Lab.top">
@@ -29,15 +31,25 @@ title: 互联网冲浪指南
 
 Hi there 👋 This is [404Lab](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw) !
 
-这是我的知识仓库，它同时也是一个共享的知识库!<br/>
+这是我的知识仓库，我们可以一起在这里记录与分享知识!
 
-我们可以一起在这里记录与分享知识!
-
-遇到问题你可以在页面底部使用 Telegram 账号进行留言。
+遇到问题你可以在页面底部使用 **Telegram** 账号进行留言。
 
 你还可以试试这个工具: [ZWS 零宽字符短网址](https://zws.404lab.top)
 
 Have fun!
+
+<img width="30%" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/04/18-21-31-02-推荐 -5-.png" alt="recommended" />
+
+<ul>
+<li>
+<Highlight color="#64dd17"> <a style={{color:"white",fontWeight:"bold"}} href="/Guide/Quantumult X脚本教程">Quantumult X 脚本教程</a></Highlight>
+</li>
+<li>
+<Highlight color="#ffd600"><a style={{color:"white",fontWeight:"bold"}}  href="/Resources/在线影视视频网站合集">高清影视网站合集</a></Highlight>
+</li>
+<li><Highlight style="display:block;" color="#aa00ff"><a style={{color:"white",fontWeight:"bold"}} href="/Resources/全球PDF资源">全球图书馆 PDF 资源</a></Highlight></li>
+</ul>
 
 ## ✨ Tips
 

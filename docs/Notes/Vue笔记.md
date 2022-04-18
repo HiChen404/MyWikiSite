@@ -45,9 +45,9 @@ App.vue 是项目的根组件
 ### 3. `main.js`
 
 ```js
-import Vue from "vue" // import Vue packet 得到 Vue 构造函数
+import Vue from 'vue' // import Vue packet 得到 Vue 构造函数
 // import App from './App.vue' //import App.vue 根组件
-import test from "./components/test.vue"
+import test from './components/test.vue'
 
 Vue.config.productionTip = false
 
@@ -55,7 +55,7 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(test), //把 render 函数指定的组件,渲染到 HTML 页面中(替换 el 或 $mount 挂载的元素)
-}).$mount("#app") //
+}).$mount('#app') //
 ```
 
 ## Vue 组件
@@ -85,7 +85,7 @@ export default{ data(){ return{ message:"", }, methods:{ } } }
 1. `import` 导入需要的组件
 
 ```js
-import componentName from "@/components/componentName.vue"
+import componentName from '@/components/componentName.vue'
 ```
 
 2. 使用 `components` 注册组件
@@ -103,11 +103,11 @@ components: {
 
 ```js
 //导入需要全局注册的组件
-import componentName from "./compnents/componentName.vue"
+import componentName from './compnents/componentName.vue'
 
 //参数1 : 字符串格式, 表示注册名称
 //参数2 : 需要被全局注册的那个组件
-Vue.component("MyComponentName", componentName)
+Vue.component('MyComponentName', componentName)
 ```
 
 ### 8. 子向父传值
@@ -137,7 +137,7 @@ function newEventName(value){
 ```js
 //EventBus.js
 
-import Vue from "vue"
+import Vue from 'vue'
 
 //向外共享 Vue 的示例对象
 
@@ -149,11 +149,11 @@ export default new Vue()
 ```js
 //message 是 data 中要发送的数据
 //导入 eventBus 获取 Vue 实例对象
-import bus from "./eventBus.js"
+import bus from './eventBus.js'
 
 //methods
 function sendMsg() {
-  bus.$emit("share", message)
+  bus.$emit('share', message)
 }
 ```
 
@@ -162,9 +162,9 @@ function sendMsg() {
 ```js
 //data 中 msgFromLeft 用于接收数据
 
-import bus from "./eventBus.js"
+import bus from './eventBus.js'
 
-bus.$on("share", value => {
+bus.$on('share', value => {
   this.msgFromLeft = value
 })
 ```
@@ -186,8 +186,8 @@ npm run install --save vue-router
 ```js
 //导入 Vue 和 Vue Router 的包
 
-import Vue from "vue"
-import VueRouter from "vue-router"
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
 //调用 Vue.use() 函数, 把 VueRouter 安装为 Vue 的插件
 
@@ -198,9 +198,9 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   //routes 是一个数组,定义对应关系
   routes: [
-    { path: "/", redirect: "/login" },
-    { path: "/login", component: Login },
-    { path: "/home", component: Home },
+    { path: '/', redirect: '/login' },
+    { path: '/login', component: Login },
+    { path: '/home', component: Home },
   ],
 })
 
@@ -209,32 +209,32 @@ const router = new VueRouter({
 export default router
 ```
 
-#### 3. 挂载==路由实例对象==
+#### 3. 挂载路由实例对象
 
 在 `main.js`中导入:
 
 ```js
-import router from "./router/index.js"
+import router from './router/index.js'
 ```
 
 挂载 ==路由实例对象==
 
 ```js
-import Vue from "vue"
-import App from "./App.vue"
+import Vue from 'vue'
+import App from './App.vue'
 // 导入路由模块
-import router from "./router/"
+import router from './router/'
 
 // 导入样式
-import "./assets/css/bootstrap.css"
-import "./index.css"
+import './assets/css/bootstrap.css'
+import './index.css'
 
 Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
   router: router, //挂载路由实例对象,可简写为 router
-}).$mount("#app")
+}).$mount('#app')
 ```
 
 ### 路由重定向 `redirect`
@@ -243,7 +243,7 @@ new Vue({
 //创建路由的实例对象
 
 const router = new VueRouter({
-  routes: [{ path: "/", redirect: Home }],
+  routes: [{ path: '/', redirect: Home }],
 })
 ```
 
@@ -253,12 +253,12 @@ const router = new VueRouter({
 const router = new VueRouter({
   routes: [
     {
-      path: "/about",
+      path: '/about',
       component: About,
       //定义子路由
       children: [
-        { path: "tab1", component: Tab1 },
-        { path: "tab2", component: Tab2 },
+        { path: 'tab1', component: Tab1 },
+        { path: 'tab2', component: Tab2 },
       ],
     },
   ],
@@ -290,12 +290,12 @@ const router = new VueRouter({
 ```js
 // 判断是否有权限登录到后台 Home
 router.beforeEach(function (to, from, next) {
-  if (to.path == "/home") {
-    const token = localStorage.getItem("token")
+  if (to.path == '/home') {
+    const token = localStorage.getItem('token')
     if (token) {
       next()
     } else {
-      next("/login")
+      next('/login')
     }
   } else {
     next()
@@ -363,9 +363,8 @@ showInput() {
 ### 5. 自定义指令 `directives`
 
 ```vue
-directives:{ color:{ bind(el,binding){ console.log(el); //绑定自定义属性 color
-的 DOM 元素 console.log(binding); // 对象: 其中 value 是向自定义指令中传递的值 }
-} }
+directives:{ color:{ bind(el,binding){ console.log(el); //绑定自定义属性 color 的 DOM 元素 console.log(binding); // 对象: 其中
+value 是向自定义指令中传递的值 } } }
 ```
 
 - #### Example
@@ -423,7 +422,7 @@ module.exports = {
   devServer: {
     port: 8080, //本地服务器端口 💡
     open: true,
-    proxy: "https://www.escook.cn", //api根路径 💡
+    proxy: 'https://www.escook.cn', //api根路径 💡
   },
 }
 ```
@@ -431,14 +430,14 @@ module.exports = {
 2. 在 `main.js` 中配置:
 
 ```js
-import Vue from "vue"
-import App from "./App.vue"
-import router from "./router"
-import axios from "axios"
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import axios from 'axios'
 
 // axios.defaults.baseURL = "https://www.escook.cn";   //将源 API 根地址注释 💡
 
-axios.defaults.baseURL = "http://localhost:8080" // 配置为本地 serve 地址 💡
+axios.defaults.baseURL = 'http://localhost:8080' // 配置为本地 serve 地址 💡
 
 Vue.prototype.$http = axios
 
@@ -447,7 +446,7 @@ Vue.config.productionTip = false
 new Vue({
   router,
   render: h => h(App),
-}).$mount("#app")
+}).$mount('#app')
 ```
 
 ## 错误排查
@@ -473,8 +472,8 @@ new Vue({
 ```js
 const router = new VueRouter({
   routes: [
-    { path: "/", redirect: "/users" },
-    { path: "/users", component: UserList },
+    { path: '/', redirect: '/users' },
+    { path: '/users', component: UserList },
   ],
 })
 ```
@@ -500,10 +499,10 @@ const router = new VueRouter({
 ```js
 var checkAge = (rule, value, cb) => {
   if (!Number.isInteger(value)) {
-    return cb(new Error("请填写整数")) // cb() 必须被调用 !
+    return cb(new Error('请填写整数')) // cb() 必须被调用 !
   }
   if (value > 100 || value < 1) {
-    return cb(new Error("年龄必须在1到100 之间")) // cb() 必须被调用 !
+    return cb(new Error('年龄必须在1到100 之间')) // cb() 必须被调用 !
   }
   cb() // cb() 必须被调用 !
 }
