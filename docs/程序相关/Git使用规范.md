@@ -1,16 +1,12 @@
-
-
 使用 git 开发项目有很长时间了，已经熟练的掌握了基本的 git 操作（删除和卸载）。
 
 但是，个人开发还是太随意了，随意的 commit，tag 等等，如果和别人合作开发的话，一定会被骂的很惨...
 
-
-
-> 注：本文内容大部分引用自 
+> 注：本文内容大部分引用自:
 >
-> **超详细的前端工程化入门教程** https://chinese.freecodecamp.org/news/front-end-engineering-tutorial/ @谭光志 (写的很不错，学到了很多)
-
-
+> **超详细的前端工程化入门教程** https://chinese.freecodecamp.org/news/front-end-engineering-tutorial/ @谭光志
+>
+> (写的很不错，学到了很多)
 
 git 规范包括两点：分支管理规范、git commit 规范。
 
@@ -55,14 +51,14 @@ workflow: 工作流相关文件修改
 
 以 [docusaurus](https://github.com/facebook/docusaurus/commits/main) 仓库为例：
 
-    refactor: customize code block line highlight color via CSS var (https://github.com/facebook/docusaurus/pull/7176)  
+    refactor: customize code block line highlight color via CSS var (https://github.com/facebook/docusaurus/pull/7176)
 
 ```
-fix(cli): always show error stack to unhandled rejection (#7218) 
+fix(cli): always show error stack to unhandled rejection (#7218)
 ```
 
 ```
-docs: remove mention of "template" from README installation (#7208) 
+docs: remove mention of "template" from README installation (#7208)
 ```
 
 ### branch 管理规范
@@ -73,17 +69,9 @@ docs: remove mention of "template" from README installation (#7208)
 
 如果改一个 BUG，也可以从 master 分支开一个新分支，并用 BUG 号命名（不过我们小团队嫌麻烦，没这样做，除非有特别大的 BUG）。
 
-
-
 #### git 规范验证
 
 验证 git commit 规范，主要通过 git 的 `pre-commit` 钩子函数来进行。当然，你还需要下载一个辅助工具来帮助你进行验证。
-
-
-
-
-
-
 
 参考资料：
 

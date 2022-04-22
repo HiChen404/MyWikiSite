@@ -1,12 +1,6 @@
-# LeetCode 刷题总结
-
-
-
 有时候刷过的题，可能过段时间就忘记怎么写了。
 
 复习真的十分重要，所以这篇文章会陆续的把写过的题**重新整理**，**分析**，**总结经验**。
-
-
 
 ## 链表
 
@@ -14,17 +8,11 @@
 
 给你单链表的头节点 `head` ，请你反转链表，并返回反转后的链表。
 
-
-
-<img src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg" style="zoom: 67%;" />
-
-
+<img src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg" style={{zoom: "67%"}} />
 
 **题目链接**：https://leetcode-cn.com/problems/reverse-linked-list/
 
 **推荐视频讲解**：https://leetcode-cn.com/problems/reverse-linked-list/solution/shi-pin-jiang-jie-die-dai-he-di-gui-hen-hswxy/
-
-
 
 #### 1. 快慢指针
 
@@ -32,7 +20,7 @@
 
 ```tsx
 function reverseList(head: ListNode | null): ListNode | null {
-  let newNode = null 
+  let newNode = null
   let cur = head
   while (cur !== null) {
     let next = cur.next
@@ -43,8 +31,6 @@ function reverseList(head: ListNode | null): ListNode | null {
   return newNode
 }
 ```
-
-
 
 #### 2. 递归
 
@@ -60,7 +46,7 @@ function reverseList(head: ListNode | null): ListNode | null {
 
 这张关于本题递归方法的图示非常好：
 
-<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/04/21-13-34-40-image-20220421133432756.png" alt="image-20220421133432756" style="zoom: 25%;" />
+<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/04/21-13-34-40-image-20220421133432756.png" alt="image-20220421133432756" style={{zoom: "67%"}} />
 
 ### [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)
 
@@ -70,11 +56,7 @@ function reverseList(head: ListNode | null): ListNode | null {
 
 如果链表中存在环 ，则返回 true 。 否则，返回 false 。
 
-
-
-<img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" style="zoom: 50%;" />
-
-
+<img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" style={{zoom: "67%"}} />
 
 #### 1. HashMap
 
@@ -96,8 +78,6 @@ function hasCycle(head: ListNode | null): boolean {
 }
 ```
 
-
-
 #### 2. 快慢指针
 
 慢指针每次移动 1 个位置，快指针每次移动 2 个位置，如果链表有环，快指针会和慢指针相遇，如果无环，快指针永远在慢指针前面，不会相遇。
@@ -116,11 +96,7 @@ function hasCycle(head: ListNode | null): boolean {
 }
 ```
 
-
-
-
-
-### [142. 环形链表2](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
+### [142. 环形链表 2](https://leetcode-cn.com/problems/linked-list-cycle-ii/)
 
 这道题与上一道 141.环形链表 的区别是，本题不仅要判断时候有环，还要返回**入环节点的 index**。
 
@@ -132,11 +108,7 @@ function hasCycle(head: ListNode | null): boolean {
 
 那么，如何找到入环的节点呢？方法是，当快慢指针在环内相遇时，将快指针或慢指针移动到该链表的头节点，然后让快慢指针每次同时移动 1 个节点，当下次快慢指针相遇时，它们指向的节点就是入环节点。
 
-
-
-<img src="https://assets.leetcode-cn.com/solution-static/142/142_fig1.png" alt="fig1" style="zoom: 25%;" />
-
-
+<img src="https://assets.leetcode-cn.com/solution-static/142/142_fig1.png" alt="fig1" style={{zoom: "67%"}} />
 
 可以推出 **a=c+(n−1)(b+c)** 的等量关系，我们会发现：从相遇点到入环点的距离加上 n−1 圈的环长，恰好等于从链表头部到入环点的距离。
 
@@ -168,13 +140,11 @@ function detectCycle(head: ListNode | null): ListNode | null {
 }
 ```
 
-
-
 ### 160. 相交链表
 
 给你两个单链表的头节点 `headA` 和 `headB` ，请你找出并返回两个单链表相交的起始节点。如果两个链表不存在相交节点，返回 `null` 。
 
-<img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_statement.png" style="zoom: 50%;" />
+<img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_statement.png" style={{zoom: "67%"}} />
 
 #### 1. 循环双指针
 
@@ -182,27 +152,17 @@ function detectCycle(head: ListNode | null): ListNode | null {
 
 这种方法很好理解，代码量也少，但是效率比较低。
 
-
-
 **为什么会相遇？** 如上图存在相交节点，
-
-
 
 A 指针走过的路程为 = ` 2 + 相交后的链表长度 + 3 + 相交后的链表长度` + ···
 
 B 指针走过的路程为 = `3 + 相交后的链表长度 + 2 + 相交后的链表长度` + ···
 
-
-
 当两个指针走过的路程相同时（两指针相遇），此处即为相交节点。
-
-
 
 **为什么不能在相交节点之后相遇？**
 
 指针的移动速度是相同的，如果没有在相交节点相遇，那么在相交节点之后也不会相遇。
-
-
 
 **如果判定链表没有相交？**
 
@@ -235,49 +195,45 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
   let lenA: number = 0
   let lenB: number = 0
   let diff: number = 0
-  
+
   //计算A长度
   while (pA !== null) {
-      lenA++
-      pA = pA.next
+    lenA++
+    pA = pA.next
   }
-    
+
   //计算B长度
   while (pB !== null) {
-      lenB++
-      pB = pB.next
+    lenB++
+    pB = pB.next
   }
-    
+
   //计算差值
   diff = lenA - lenB
-    
-  //重置指针  
+
+  //重置指针
   pA = headA
   pB = headB
-  
-    
+
   //较长链移动 diff 个位置
   if (diff > 0) {
-      while (diff > 0) {
-          pA = pA.next as ListNode
-          diff--
-      }
+    while (diff > 0) {
+      pA = pA.next as ListNode
+      diff--
+    }
   } else {
-      while (diff < 0) {
-          pB = pB.next as ListNode
-          diff++
-      }
+    while (diff < 0) {
+      pB = pB.next as ListNode
+      diff++
+    }
   }
-    
+
   //两个指针同时移动
   while (pA !== null && pB !== null) {
-      if (pA === pB) return pA
-      pA = pA.next
-      pB = pB.next
+    if (pA === pB) return pA
+    pA = pA.next
+    pB = pB.next
   }
   return null
 }
 ```
-
-
-
