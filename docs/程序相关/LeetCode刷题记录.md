@@ -237,3 +237,125 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
   return null
 }
 ```
+
+### 136. 只出现 1 次的数字
+
+---
+
+### 234. 回文链表
+
+给你一个单链表的头节点 `head` ，请你判断该链表是否为回文链表。如果是，返回 `true` ；否则，返回 `false` 。
+
+```
+输入：head = [1,2,2,1]
+输出：true
+```
+
+![img](https://assets.leetcode.com/uploads/2021/03/03/pal1linked-list.jpg)
+
+https://leetcode-cn.com/problems/palindrome-linked-list/
+
+#### 1. 利用数组反转
+
+创建一个数组，将链表的值推进去，再通过反转数组，对比前后数组是否相同即可判断。
+
+```typescript
+function isPalindrome(head: ListNode | null): boolean {
+  let arr = []
+  while (head !== null) {
+    arr.push(head.val)
+    head = head.next
+  }
+  // 注意 reverse() 方法的使用，会改变原数组
+  let reverse = [...arr].reverse()
+
+  return arr.join('') === reverse.join('')
+}
+```
+
+注意：`reverse()` 会改变数组本身。
+
+#### 2. 快慢指针，反转后半部分链表
+
+```typescript
+function isPalindrome2(head: ListNode | null): boolean {
+  if (head === null) return false
+  let slow: ListNode | null = head
+  let fast: ListNode | null = head
+
+  //偶数情况
+  while (fast !== null && fast.next !== null) {
+    slow = slow.next as ListNode
+    fast = fast.next.next as ListNode
+  }
+
+  //如果是奇数，此时slow指向正中间，fast 指向 末尾节点
+  while (fast !== null) {
+    slow = slow.next as ListNode
+    fast = fast.next
+  }
+
+  //反转后半部分 206.反转链表
+  let newNode = null
+  while (slow !== null) {
+    let temp: ListNode | null = slow.next
+    slow.next = newNode
+    newNode = slow
+    slow = temp
+  }
+
+  //比较前后两个链表是否相等
+  fast = head
+  slow = newNode
+  while (slow !== null) {
+    if (fast?.val !== slow?.val) return false
+    fast = fast?.next as ListNode
+    slow = slow?.next
+  }
+  return true
+}
+```
+
+### [剑指 Offer 22. 链表中倒数第 k 个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
+
+输入一个链表，输出该链表中倒数第 k 个节点。为了符合大多数人的习惯，本题从 1 开始计数，即链表的尾节点是倒数第 1 个节点。
+
+例如，一个链表有 6 个节点，从头节点开始，它们的值依次是 1、2、3、4、5、6。这个链表的倒数第 3 个节点是值为 4 的节点。
+
+### 415. 字符串相加
+
+给定两个字符串形式的非负整数 num1 和 num2 ，计算它们的和并同样以字符串形式返回。
+
+你不能使用任何內建的用于处理大整数的库（比如 BigInteger）， 也不能直接将输入的字符串转换为整数形式。
+
+```js
+输入：num1 = "11", num2 = "123"
+输出："134"
+```
+
+```typescript
+function addStrings(num1: string, num2: string): string {
+  let i = num1.length - 1
+  let j = num2.length - 1
+  let up = 0
+  let res = []
+  while (i >= 0 || j >= 0 || up !== 0) {
+    //如果位数不足就补零 charAt 如果超出返回则返回空字符串
+    // 当 i = 0 时，取的时 字符串第一位数字
+    const x = i >= 0 ? +num1.charAt(i) : 0
+    const y = j >= 0 ? +num2.charAt(j) : 0
+
+    const sum = x + y + up
+    res.push(sum % 10)
+
+    // sum/10  在 0 - 18 之间 up 的取值为 0 或 1
+    up = Math.floor(sum / 10)
+    i--
+    j--
+  }
+
+  return res.reverse().join('')
+}
+
+console.log(addStrings('26', '184'))
+```
