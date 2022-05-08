@@ -9,17 +9,32 @@ import Head from '@docusaurus/Head'
 import HeroImg from '../../static/img/Hero.jpg'
 
 const svgList = [
-  { title: 'github', Svg: require('../../static/img/github.svg').default, color: 'black' },
-  { title: 'wechat', Svg: require('../../static/img/wechat.svg').default, color: '#64dd17' },
-  { title: 'zhihu', Svg: require('../../static/img/zhihu.svg').default, color: '#2979ff' },
+  {
+    title: 'github',
+    Svg: require('../../static/img/github.svg').default,
+    color: 'black',
+    link: 'https://github.com/HiChen404/MyWikiSite',
+  },
+  {
+    title: 'wechat',
+    Svg: require('../../static/img/wechat.svg').default,
+    color: '#64dd17',
+    link: 'https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw',
+  },
+  {
+    title: 'zhihu',
+    Svg: require('../../static/img/zhihu.svg').default,
+    color: '#2979ff',
+    link: 'https://www.zhihu.com/people/li-kang-ning',
+  },
 ]
-const Svg = ({ Svg, color, title }) => <Svg className={styles.svg} style={{ fill: color }} />
-// const MySEO = () => (
-//   <Head>
-//     {/* <title>dfsdfsdf</title> */}
-//     <script type="text/javascript" src="../../baidu.js"></script>
-//   </Head>
-// );
+const Svg = ({ Svg, color, title, link }) => {
+  return (
+    <a href={link} target='_blank'>
+      <Svg className={styles.svg} style={{ fill: color }} />
+    </a>
+  )
+}
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext()
@@ -46,14 +61,18 @@ function MyHero() {
           Always <br /> Ready to Code.
         </h1>
         <p className={styles.leftContainer_p}>
-          Spin up fresh, automated dev environments
+          我是陈晨,热爱计算机的一切,
           <br />
-          for each task, in the cloud, in seconds.
+          我在这里记录知识，希望同样能够帮助到你。
         </p>
         <div className={styles.buttonContainer}>
-          <button className={styles.button}>Click</button>
+          <button className={styles.button}>
+            <a className={styles.hero_a} href='/'>
+              Click
+            </a>
+          </button>
           <span className={styles.buttonLeftText}>
-            Open a workspace. <br /> Start from any Git context.
+            Get Started. <br /> 开启学习之旅.
           </span>
           <div className={styles.svgContainer}>
             {svgList.map((item, index) => {
@@ -75,11 +94,10 @@ export default function Home() {
       // title={`${siteConfig.title}`}
       title='Home'
       description='Wiki知识库/vscode/javascript/软件/工具'>
-      {/* <MySEO /> */}
       {/* <HomepageHeader /> */}
       <main>
         <MyHero />
-        <HomepageFeatures />
+        {/* <HomepageFeatures /> */}
       </main>
     </Layout>
   )

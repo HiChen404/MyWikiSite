@@ -32,10 +32,10 @@
   background-color: #f5f4f4;
   width: 100%;
   overflow: hidden;
-  padding: 4rem 6rem;
+  padding: 2.5rem 6rem;
 }
 .leftContainer {
-  padding: 5rem 0 0 3rem;
+  padding: 3rem 0 0 1rem;
   font-size: 40px;
   flex: 2;
 }
@@ -47,9 +47,11 @@
 .rightContainer img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .leftContainer_h1 {
+  color: rgb(58, 58, 58);
   font-size: 4rem;
 }
 .leftContainer_p {
@@ -75,7 +77,15 @@
   border-radius: 0.6rem;
   font-size: 1.2rem;
   font-weight: bold;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
+.button:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.button:active {
+  transform: scale(0.98);
+}
+
 .buttonLeftText {
   display: inline-block;
   margin: 0 0 10px 20px;
@@ -92,4 +102,20 @@
 .svg {
   /* font-size: 20px; */
   width: 2.5rem;
+}
+.hero_a {
+  text-decoration: none;
+  color: white;
+}
+.hero_a:hover {
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 966px) {
+  .myHeroContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
 }

@@ -8,7 +8,7 @@
 
 /* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Poppins:wght@500&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&family=Poppins:wght@500&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 :root {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
@@ -29,12 +29,12 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme="dark"] .docusaurus-highlight-code-line {
+html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 html {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-style: normal;
 }
 
@@ -97,13 +97,13 @@ blockquote:hover {
   box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0);
 }
 
-html[data-theme="dark"] blockquote {
+html[data-theme='dark'] blockquote {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 code {
   color: var(--ifm-color-primary);
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans';
 }
 
 .markdown > h2 {
@@ -142,7 +142,7 @@ p {
 }
 
 /* 公告栏 */
-div[class^="announcementBar_"] {
+div[class^='announcementBar_'] {
   background: repeating-linear-gradient(
     35deg,
     var(--site-announcement-bar-stripe-color1),
@@ -151,4 +151,19 @@ div[class^="announcementBar_"] {
     var(--site-announcement-bar-stripe-color2) 40px
   );
   font-weight: 700;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset006pxrgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255, 0, 0, 0.4);
 }
