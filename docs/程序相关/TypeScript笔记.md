@@ -122,6 +122,10 @@ type MyRecord<K extends string | number | symbol, T> = {
 
 ## Some Cases
 
+### 从接口中拓展新类型
+
+例如需要从 `IProduct` 这个商品接口中添加 `quantity` 属性，并且剔除 `inventory` 属性以生成一个 `CartProduct` 类型。
+
 ```typescript
 interface IProduct {
   id: number
@@ -133,9 +137,133 @@ interface IProduct {
 type CartProduct = {
   quantity: number
 } & Omit<IProduct, 'inventory'>
+
+/** 预期：
+type CartProduct = {
+  id: number
+  title: string
+  price: number
+  // highlight-next-line
+  quantity: number
+}
+*/
 ```
 
-> 这篇学习记录学习了以下内容，非常感谢！
+### 从数组元素值中定义 Union Type
+
+students 是一个包含每个学生信息的数组：
+
+```typescript
+const students = [
+  {
+    name: 'tom',
+    age: 20,
+  },
+  {
+    name: 'jack',
+    age: 19,
+  },
+]
+```
+
+如果想要提取出 `students` 中学生的姓名组成一个新的联合类型，可以这样做：
+
+```typescript
+type studentName = 'tom' | 'jack'
+```
+
+但是这样每当 `students` 数组中的元素增加了，那么就需要手动更新 `studentName` 的定义，这明显不够优雅。
+
+所以可以使用 `const` 类型断言配合**索引访问**的方式来优雅实现：
+
+```typescript
+const students = [
+  {
+    name: 'tom',
+    age: 20,
+  },
+  {
+    name: 'jack',
+    age: 19,
+  },
+] as const
+
+type studentName = typeof students[number]['name']
+
+// 预期：
+// type studentName = 'tom' | 'jack'
+```
+
+但在实际开发中，我们通常会预先定义每个 `student` 的类型：
+
+```typescript
+// highlight-start
+type Student = {
+  name: string
+  age: number
+}
+// highlight-end
+
+// highlight-next-line
+const students: Student[] = [
+  {
+    name: 'tom',
+    age: 20,
+    sex: 'male',
+  },
+  {
+    name: 'jack',
+    age: 19,
+    sex: 'female',
+  },
+]
+
+type studentName = typeof students[number]['name']
+
+// 不符合预期：
+// highlight-next-line
+// type studentName = string
+```
+
+但是你会发现先前的解决方案就失效了，这是因为 `Student[]` 是一个可变类型。
+
+如果要解决这个问题，就需要使用**泛型函数**：
+
+```typescript
+type Student<T> = {
+  //highlight-next-line
+  name: T
+  age: number
+}
+
+function defineStudents<T extends string>(students: Student<T>[]) {
+  return students
+}
+
+const students = defineStudents([
+  {
+    name: 'tom',
+    age: 20,
+    sex: 'male',
+  },
+  {
+    name: 'jack',
+    age: 19,
+    sex: 'female',
+  },
+])
+
+type studentName = typeof students[number]['name']
+
+// 符合预期:
+// type studentName =  'tom' | 'jack'
+```
+
+> 不过有个问题：为什么 `defineStudents` 需要 `T extends string` 才有效果？
+
+这个案例学习了这一篇文章： https://fehey.com/typescript-const-generic-union-type/ 非常感谢！
+
+> 这篇学习记录参考和学习了以下内容：
 >
 > https://www.typescriptlang.org/
 >

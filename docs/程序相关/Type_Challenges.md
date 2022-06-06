@@ -267,3 +267,10 @@ type t = If<null, true, false> // t 的类型是 true
 > https://www.typescriptlang.org/tsconfig#strictNullChecks
 >
 > https://www.typescriptlang.org/docs/handbook/type-compatibility.html#any-unknown-object-void-undefined-null-and-never-assignability
+
+
+
+
+
+## 898 Easy Includes
+
