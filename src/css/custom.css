@@ -22,6 +22,10 @@
   --site-announcement-bar-stripe-color2: hsl(167deg 68% 95%);
 }
 
+html::-webkit-scrollbar {
+  width: auto;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
