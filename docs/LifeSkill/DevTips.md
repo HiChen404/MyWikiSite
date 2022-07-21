@@ -137,3 +137,21 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 > 官方安装文档：https://docs.microsoft.com/en-us/windows/wsl/install
 
 ### 开启 Sandbox
+--- 
+### Chrome 关闭同源策略
+
+在日常开发的时候，经常会碰到浏览器同源策略限制 AJAX 请求的问题，常见的解决方法有：
+
+- **代理**: 适用于生产环境不发生跨域，但开发环境发生跨域
+- **CORS**：定义了不同的交互模式：**简单请求**，**需预校验的请求**和**附带身份凭证的请求**。
+- **JSONP**：不使用 AJAX，而生成 script 元素请求服务器，返回预定义的函数调用，将参数（数据）传递给函数。
+
+不过在本地开发中，也可以直接关闭同源策略。
+
+**关闭方法：**
+
+在 **Chrome 浏览器**的快捷方式中，添加以下参数即可：
+
+```
+--args --disable-web-security --user-data-dir
+```
