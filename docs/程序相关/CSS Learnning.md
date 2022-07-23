@@ -16,11 +16,32 @@ tags: [编程, CSS]
 2. https://css-tricks.com/
 3. [CSS Reference - A free visual guide to CSS](https://cssreference.io/)
 
-## ·Flex
+
+## [all](https://developer.mozilla.org/en-US/docs/Web/CSS/all)
+
+使用这个属性可以快速的将一个元素的样式清空。
+
+```
+button {
+   all: unset
+}
+```
+这个 button 元素的样式就会完全清空了。
+
+## [animation-play-state](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state)
+
+使用这个属性可以控制 CSS 动画的播放状态。
+## [accent-color](https://developer.mozilla.org/en-US/docs/Web/CSS/accent-color#try_it)
+
+可以使用这个属性来覆盖 checkbox 等元素默认的颜色。
+
+![](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/07/23-09-26-26-20220723092626.png)
+
+## Flex
 
 ### 1. [Flex](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 
-## ·Grid
+## Grid
 
 > **[Grid by Example](https://gridbyexample.com/)** 学习 CSS 网格布局时需要的一切。
 
@@ -104,9 +125,9 @@ CSS
   grid-template-columns: 33.333% 66.666%;
   grid-template-rows: 10% 80% 10%;
   grid-template-areas:
-    "h h h"
-    "s m m"
-    "f f f";
+    'h h h'
+    's m m'
+    'f f f';
 }
 .header {
   background: #ff5454;
