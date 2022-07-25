@@ -120,6 +120,27 @@ git config --global core.editor Code -w
 
 > 参考：https://stackoverflow.com/questions/9725160/aborting-commit-due-to-empty-commit-message
 
+### 撤销提交
+
+如果不小心进行了错误一次提交，例如：
+
+```bash
+git commit -m "Something terribly misguided"
+```
+
+但是这次提交还没有推送到服务器，那么该如何撤销这次 commit 呢？
+
+```bash
+$ git commit -m "Something terribly misguided" # (0: Your Accident)
+$ git reset HEAD~                              # (1)
+[ edit files as necessary ]                    # (2)
+$ git add .                                    # (3)
+$ git commit -c ORIG_HEAD                      # (4)
+```
+
+> 参考：
+> https://stackoverflow.com/questions/927358
+
 ## Windows
 
 ### 开启 WSL
@@ -137,7 +158,11 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 > 官方安装文档：https://docs.microsoft.com/en-us/windows/wsl/install
 
 ### 开启 Sandbox
---- 
+
+---
+
+## 其他
+
 ### Chrome 关闭同源策略
 
 在日常开发的时候，经常会碰到浏览器同源策略限制 AJAX 请求的问题，常见的解决方法有：
