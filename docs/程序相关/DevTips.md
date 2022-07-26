@@ -141,6 +141,84 @@ $ git commit -c ORIG_HEAD                      # (4)
 > 参考：
 > https://stackoverflow.com/questions/927358
 
+## 浏览器 DevTool
+
+浏览器调试工具是开发中最常用到的工具，它可以帮助我们调试代码，但是其中有非常多的技巧我们可能还没有了解。
+
+### $() 函数
+
+- `$_` 存储最后一个命令的结果。 因此，如果键入 `2+2` 并按 Enter 下，然后键入 $\_， 控制台 将显示 4。
+
+- `$()` 是 **document.querySelector** 的简写。
+- `$$()` 是 **document.querySelectorAll** 的简写。
+
+- `$0` 是当前选中的元素。也就是说，如果你在`元素`面板中选中了一个 DOM 元素，那么在控制台中 `$0` 就代表这个元素。
+
+- `$x()` 可以使用 XPpath 选择 DOM 元素。
+
+下面有一些例子：
+
+- 从页面中提取所有的链接，作为可排序表格
+
+```js
+console.table($$('a'), ['href', 'text'])
+```
+
+- 获取页面所有的链接
+
+刚才说了 `$$()` 是 **document.querySelectorAll()** 的简写，但是它**不是**返回纯的 `NodeList`，它返回的对象身上包含了所有 `Array`的方法。也就是说我们可以对 `$$()` 返回的结果进行 `forEach` 等数组方法。
+
+```js
+$$('a')
+  .map(a => a.href)
+  .join('\n')
+```
+
+### copy()
+
+刚才使用 `$()` 函数获取了一些内容，但是如果我们**想把返回的结果复制到剪贴板**呢？
+
+通常的做法是使用鼠标手动选择后，按下 `Ctrl` + `C` 就可以复制， 但有了 `copy()`，复制操作更加方便。
+
+```js
+copy(
+  $$('a')
+    .map(a => a.href)
+    .join('\n'),
+)
+```
+
+`copy()` 与 `$()` 结合更加强大：
+
+```js
+copy($_) //复制最后一个命令返回的结果
+
+copy($0) //复制当前选中的 DOM 元素
+```
+
+### 读取和监视事件
+
+- `getEventListeners(node)` 列出节点的所有事件侦听器。
+- `monitorEvent(node,events)` 监视和记录节点上发生的事件。
+
+例如我想**监视窗口滚动和缩放**的事件，
+
+```js
+monitorEvent(window, ['resize', 'scroll'])
+```
+
+监听**选中元素**的 `keyup` 事件，
+
+```js
+monitorEvent($0, 'keyup')
+```
+
+这样每次事件触发时，在控制台就会打印出详细的通知。
+
+具体的说明可以参考官方文档：
+
+> https://docs.microsoft.com/zh-cn/microsoft-edge/devtools-guide-chromium/console/console-dom-interaction
+
 ## Windows
 
 ### 开启 WSL
@@ -151,7 +229,7 @@ $ git commit -c ORIG_HEAD                      # (4)
 
 之后，使用**管理员身份**打开 **Powershell** 运行如下命令：
 
-```
+```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
