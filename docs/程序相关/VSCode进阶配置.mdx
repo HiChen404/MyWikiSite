@@ -1,0 +1,143 @@
+---
+description: VSCode 指南
+keywords:
+  - vscode
+image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-28-23-404Lab.jpeg
+tags: [编程, vscode，软件]
+---
+
+import { Highlight } from "@site/src/components/MyMDX"
+
+<img
+  className="Badges"
+  src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg"
+/>
+
+## 1. 开启字体连字
+
+```json
+"editor.fontFamily": "Fira Code Light, Consolas, Microsoft YaHei",
+"editor.fontLigatures": true
+```
+
+## 2. 用户代码段
+
+```json
+{
+// Place your snippets for java here. Each snippet is defined under a snippet name and has a prefix, body and
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+    // same ids are connected.
+    // Example:
+      "Print to console": {
+      "prefix": "log",
+      "body": [
+          "console.log('$1');",
+          "$2"
+      ],
+      "description": "Log output to console"
+}
+```
+
+Example:
+
+```json
+{
+  "换行输出": {
+    // 片段名称
+    "prefix": "sop", // 输入UTF触发联想提升
+    "body": [
+      // 确认后添加的代码
+      " System.out.println(\"$0\");" // $0代表光标最后停留的位置
+    ],
+    "description": "println" // 提示的内容
+  }
+}
+```
+
+## 3. 添加环境变量（GBK 与 utf 8）
+
+```java
+javac -encoding utf-8 *.java
+-Dfile.encoding=UTF-8
+
+// chcp 65001
+```
+
+## 4. VSCode 无法找到 Git
+
+在 设置 中搜索: `git.path`
+
+```json
+"git.path":"D:\\Git\\bin\\git.exe"   //git 的目录
+```
+
+## 5. 快速删除空行
+
+```
+^\s*$\n
+```
+
+## 6. React JSX 开启 HTML 标签提示
+
+在 Emmet 插件设置的 includeLanguages 属性中添加 `jsx` 支持。
+
+> Emmet includeLanguages: 在默认不受支持的语言中启用 Emmet 缩写。在此语言和 Emmet 支持的语言之间添加映射。
+> 例如: {"vue-html": "html", "javascript": "javascriptreact"}
+
+```json
+ "emmet.includeLanguages":{
+      "javascript":"javascriptreact"
+  }
+```
+
+同理微信小程序 `wxml` 中也可添加 HTML 标签提示。
+
+```json
+"emmet.includeLanguages":{
+  "wxml":"html"
+}
+```
+
+## 7. 代码自定义区域折叠
+
+在 VS code 中，代码不仅可以使用其语法格式进行折叠，还可以<Highlight color="#25c2a0">自定义区域折叠！</Highlight>
+
+```jsx title=" React: ./index.js"
+const styles = StyleSheet.create({
+  //highlight-next-line
+  //被 //#region 与 //#endregion 包裹的区域可进行折叠！
+
+  //highlight-next-line
+  //#region Header
+  headerWrapper:{...},
+  headerTitle:{...},
+  headerText:{...},
+  //highlight-next-line
+  //#endregion
+
+  //highlight-next-line
+  //#region Footer
+  footerWrapper:{...},
+  footerTitle:{...},
+  footerText:{...},
+  //highlight-next-line
+  //#endregion
+})
+```
+
+## 8. 视觉效果(提体验感)
+
+VSCode 支持自定义 `Cursor Blinking` (光标) 的动画样式,可选项为:
+
+&nbsp;<Highlight color="#25c2a0">blink(default)</Highlight>
+&nbsp;<Highlight color="#25c2a0">smooth</Highlight>
+&nbsp;<Highlight color="#25c2a0">phase</Highlight>
+&nbsp;<Highlight color="#25c2a0">solid</Highlight>
+&nbsp;<Highlight color="#25c2a0">expand</Highlight>
+
+其中我比较喜欢类似于呼吸的 `smooth` 效果。
+
+当然，光标的样式也可自定义，你可以在 `设置`->`光标` 中查看所有的配置项。
+
+还有一个有意思的设置，你可以开启&nbsp;<Highlight color="#25c2a0">光标平滑移动效果</Highlight>，让视觉效果更加丝滑。
