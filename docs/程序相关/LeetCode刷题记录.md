@@ -359,3 +359,76 @@ function addStrings(num1: string, num2: string): string {
 
 console.log(addStrings('26', '184'))
 ```
+
+### [移动 0](https://leetcode.cn/problems/move-zeroes/)
+
+#### 将 0 移动到最后
+
+```javascript
+function moveZero(num) {
+  let j = 0
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] !== 0) {
+      num[j] = num[i]
+      j++
+    }
+  }
+  while (j < arr.length) {
+    num[j] = 0
+    j++
+  }
+}
+```
+
+#### 将 0 移到最前
+
+```javascript
+function moveZero(num) {
+  let j = num.length - 1
+  for (let i = num.length - 1; i >= 0; i--) {
+    if (num[i] !== 0) {
+      num[j] = num[i]
+      j--
+    }
+  }
+  while (j >= 0) {
+    num[j] = 0
+    j--
+  }
+}
+```
+
+### 20.[有效括号](https://leetcode.cn/problems/valid-parentheses/)
+
+给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
+
+有效字符串需满足：
+- 左括号必须用相同类型的右括号闭合。
+- 左括号必须以正确的顺序闭合。
+
+**答案：**
+
+利用 `栈` 先进后出的原理。
+
+```typescript
+function isValid(str: string): boolean {
+  const stack = []
+  const map: Record<string, string> = {
+    '(': ')',
+    '[': ']',
+    '{': '}',
+  }
+  for (let i of str) {
+    if (map[i]) {
+      stack.unshift(map[i])
+    } else {
+      if (stack[0] === i) {
+        stack.shift()
+      } else {
+        return false
+      }
+    }
+  }
+  return stack.length === 0
+}
+```
