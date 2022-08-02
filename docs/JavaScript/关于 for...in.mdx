@@ -1,0 +1,166 @@
+---
+description: for...in 与 for...of 的区别
+keywords:
+  - JavaScript
+image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-28-23-404Lab.jpeg
+tags: [JavaScript]
+---
+
+import { Highlight } from '../../src/components/MyMDX'
+
+<Highlight color="#feca57">如果你有好的想法，请一起完善吧~</Highlight>
+
+
+<img
+  className='Badges'
+  src='https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg'
+/>
+
+
+## for...in
+
+`for...in` 语句以**任意顺序**迭代一个对象的除 Symbol 以外的可枚举属性，**包括继承的**可枚举属性。
+
+<!-- TODO: -->
+<!-- 此处存在疑问 -->
+
+:::tip Note
+for in **不应该**用于迭代一个关注索引顺序的 Array，因为它会把索引顺序的错误暴露给用户。
+
+另外，for in 也**不建议**用于迭代数组。
+:::
+
+定义一个 **animal** 和 **rabbit** 对象，rabbit **原型**为 animal 。
+
+```js
+let animal = {
+  eats: true,
+}
+
+let rabbit = {
+  jumps: true,
+  __proto__: animal,
+}
+```
+
+`for...in` 会**迭代继承的属性**
+
+```js
+for (let i in rabbit) {
+  console.log(i)
+}
+//jumps eats
+```
+
+### 怎么才能遍历 rabbit 自己的属性？
+
+#### 1. 使用 `Object.keys(obj)`
+
+仅返回 rabbit 对象自己的**可枚举**属性。
+
+```js
+Object.keys(rabbit)
+```
+
+这些属性的顺序与手动遍历该对象属性时的一致。
+
+#### 2. 使用 `obj.hasOwnProperty(key)` 过滤
+
+```js
+for (let i in rabbit) {
+  if (rabbit.hasOwnProperty(i)) {
+    console.log(i)
+  }
+}
+// jumps
+```
+
+#### 3. `getOwnPropertyNames`
+
+```js
+for (let i in rabbit) {
+  console.log(Object.getOwnPropertyNames(rabbit))
+}
+// [ 'jumps']
+```
+
+但这样会把**不可枚举对象也返回**。
+
+**例如：**
+
+下边的代码定义了一个对象 **o**，属性 **a** 是 `enumerable` 的，**b** 不是。
+
+```js
+// 创建一个新对象
+var o = { a: 'cat' }
+
+// 在对象中添加一个属性与数据描述符的示例
+Object.defineProperty(o, 'b', {
+  value: 'dog',
+  writable: true,
+  enumerable: false,
+  configurable: true,
+})
+```
+
+如果现在还要使用 `Object.getOwnPropertyNames(obj)`，就会把不可枚举的属性也返回。
+
+```js
+console.log(Object.getOwnPropertyNames(o))
+// [ 'a', 'b' ]
+// 这里的 b 是不可枚举的。
+```
+
+再比如：
+
+```js
+const arr = ['a', 'b', 'c']
+console.log(Object.getOwnPropertyNames(arr))
+//['0', '1', '2', 'length']
+// 这里的 length 是不可枚举的。
+```
+
+通常我们并不需要返回那些不可枚举的属性，
+
+所以可以使用 `Object.prototype.propertyIsEnumerable(prop)` 过滤掉不可枚举的属性。
+
+:::note Note
+可能你会发现，既然 for...in 会迭代继承的属性， 那**为什么 Object.prototype 的属性却没有被遍历**呢？
+
+这是因为 `Object.prototype` 中的属性有 `enumerable:false` 的标志。
+
+基本包装类型的原型属性是不可枚举的
+:::
+
+最后，`for...in` 是为遍历对象属性而构建的，不建议与数组一起使用。
+
+如果你只要考虑对象本身的属性，而不是它的原型，那么使用 **getOwnPropertyNames()** 或执行
+**hasOwnProperty()** 来确定某属性是否是对象本身的属性（也能使用 **propertyIsEnumerable**）。
+
+## **for...of**
+
+`for...of` 语句在可迭代对象（包括 Array，Map，Set，String，TypedArray，arguments 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同**属性的值**执行语句
+
+对于 **for...of** 的循环，可以由 break, throw 或 return 终止。
+
+## **for...in** 与 **for...of** 的区别
+
+它们之间的主要区别在于它们的<Highlight color="#feca57">迭代方式</Highlight>。
+
+`for...in` 为了遍历一个对象的所有键（key），语句以任意顺序迭代对象的**可枚举属性**。
+
+`for...of` 语句遍历可迭代对象定义要迭代的**数据**。
+
+并且，不建议使用 for...in 遍历数组。
+
+:::note 参考：
+https://www.cnblogs.com/kongxy/p/4618173.html 
+
+https://zh.javascript.info/iterable
+
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable 
+
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames 
+
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty 
+:::
