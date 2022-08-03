@@ -4,6 +4,7 @@ const COLOR = {
   yellow: '#feca57',
   mint: '#25c2a0',
   blue: '#1877F2',
+  red:'#ff5252'
 }
 
 export function Highlight({ children, color, colorName }) {
