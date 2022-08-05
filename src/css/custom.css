@@ -20,6 +20,8 @@
   --ifm-code-font-size: 95%;
   --site-announcement-bar-stripe-color1: hsl(167deg 68% 85%);
   --site-announcement-bar-stripe-color2: hsl(167deg 68% 95%);
+  --ifm-font-family-base: 'JetBrains Mono Medium', 'FZLanTingYuanS-R-GB', 'Operator Mono SSm Medium',
+    'Noto Sans';
 }
 
 html::-webkit-scrollbar {
@@ -108,6 +110,8 @@ html[data-theme='dark'] blockquote {
 code {
   color: var(--ifm-color-primary);
   font-family: 'Noto Sans';
+  border: none;
+  padding: 0.1em 0.4em;
 }
 
 .markdown > h2 {
