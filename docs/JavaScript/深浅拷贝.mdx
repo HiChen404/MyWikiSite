@@ -1,0 +1,241 @@
+---
+description: 关于深拷贝和浅拷贝
+keywords:
+  - JavaScript
+image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-28-23-404Lab.jpeg
+tags: [JavaScript]
+---
+
+import { Highlight } from '../../src/components/MyMDX'
+
+<img
+  className='Badges'
+  src='https://picgo-1259617372.cos.ap-beijing.myqcloud.com/logo_chen_%E7%B4%AB%E8%89%B2.svg'
+/>
+
+在 JavaScript 中， 数据类型分为 **基本数据类型** 和 **引用数据类型**。
+
+如果将一个对象赋值给一个变量，那么这个变量就会指向这个对象的内存地址，而不是拷贝一份。
+
+由于两者的值是同一个引用，那么修改任何一方的值，另一方也会相应改变。
+
+开发中为了避免上述情况，通常可以使用 **深拷贝** 或 **浅拷贝**的方法。
+
+## 浅拷贝
+
+浅拷贝是指创建一份新的数据， 如果原对象中属性是基本类型，那么就会拷贝这个属性的值，如果属性是引用类型，那么就会拷贝这个属性值的引用。
+
+简单来说，浅拷贝就是拷贝一层，对于复杂的嵌套对象，还是共享相同的引用。
+
+存在浅拷贝现象的有：
+
+- `Object.assign()`
+- `Array.prototype.slice()`
+- `Array.prototype.concat()`
+- 扩展运算符
+
+### Object.assign
+
+对于简单的对象，使用 Object.assign 可以实现精确拷贝。
+
+```js
+let a = {
+  name: 1,
+}
+
+let b = Object.assign({}, a)
+
+console.log(b.name)
+// 1
+
+a.name = 2
+
+console.log(b.name)
+// 1
+```
+
+如果是嵌套对象，**其中引用类型的属性就会共享相同的引用**。
+
+```js
+let a = {
+  name: 1,
+  child: {
+    age: 2,
+  },
+}
+
+let b = Object.assign({}, a)
+
+a.name = 3
+a.child.age = 4
+
+console.log(b)
+//{ name: 1, child: { age: 4 } }
+// name 是简单类型， child 是引用类型
+```
+
+### 扩展运算符
+
+扩展运算符的现象和 `Object.assign` 类似。
+
+```js
+let a = {
+  name: 1,
+}
+
+let b = {
+  ...a,
+}
+
+a.name = 2
+
+console.log(b.name)
+// 1
+```
+
+### slice() 与 concat()
+
+`slice()` 和 `concat()` 也可以实现浅拷贝，与上述的 Object.assign 类似。
+
+## 深拷贝
+
+浅拷贝只解决了第一层的问题，对于复杂的嵌套对象，就需要**深拷贝**了。
+
+深拷贝的常见方法：
+
+- `JSON.stringify()`
+- `lodash.cloneDeep()`
+- 循环递归
+
+### JSON.stringify()
+
+```js
+//定义一个复杂嵌套的对象
+let a = {
+  name: 'js',
+  child: {
+    age: 1,
+    child: {
+      sex: 2,
+    },
+  },
+}
+
+let b = JSON.parse(JSON.stringify(a))
+
+a.child.child.sex = 3
+
+console.log(b.child.child.sex)
+//2
+```
+
+`JSON.stringify()` 解决了深拷贝的问题。
+
+但是，`JSON.stringify()` **有以下问题**：
+
+- 会忽略函数、`undefined`
+- `NaN` 和 `Infinity` 格式的数值及 `null` 都会被当做 `null`。
+- 其他类型的对象，包括 Map/Set/WeakMap/WeakSet，仅会序列化可枚举的属性。
+- 不可枚举的属性将被忽略。
+
+#### 忽略函数、`undefined` 等类型
+
+对象其中<Highlight colorName='yellow'>属性值</Highlight>为 **undefined** 将被忽略 **函数**和 **Symbol** 也被忽略
+
+```js
+JSON.stringify({ x: undefined, y: Object, z: Symbol('') })
+// '{}'
+```
+
+#### 函数、undefined 被**单独转换**时，会返回 undefined
+
+```js
+JSON.stringify(undefined)
+// undefined
+JSON.stringify(function () {})
+// undefined
+```
+
+#### 其他：
+
+```js
+//对象其中属性值为 null 不忽略
+JSON.stringify({ x: null, y: Object, z: Symbol('') })
+// {"x":null}
+
+JSON.stringify([undefined, Object, Symbol(''), null])
+// '[null,null,null,null]'
+```
+
+### lodash.cloneDeep()
+
+```js
+const _ = require('lodash')
+const obj1 = {
+  a: 1,
+  b: { f: { g: 1 } },
+  c: [1, 2, 3],
+}
+const obj2 = _.cloneDeep(obj1)
+console.log(obj1.b.f === obj2.b.f) // false
+```
+
+### 循环递归
+
+#### 简易版
+
+```js
+function deepClone(newObj, oldObj) {
+  for (let i in oldObj) {
+    let item = oldObj[i]
+    if (typeof item === 'function') {
+      newObj[i] = item
+    } else if (Array.isArray(item)) {
+      newObj[i] = []
+      deepClone(newObj, item)
+    } else if (typeof item === 'object') {
+      newObj[i] = {}
+      deepClone(newObj, item)
+    } else {
+      newObj[i] = item
+    }
+  }
+  return newObj
+}
+```
+
+#### 复杂版本
+
+```js
+function deepClone(obj, hash = new WeakMap()) {
+  //如果是 obj 就不拷贝
+  if (obj === null) return obj
+
+  if (obj instanceof Date) return new Date()
+  if (obj instanceof RegExp) return new RegExp()
+
+  //如果是基本类型
+  if (typeof obj !== 'object') return obj
+
+  //如果是复杂类型
+  if (hash.get(obj)) return hash.get(obj)
+  // 原型上的 constructor 指向的是当前类本身
+  let cloneObj = new obj.constructor()
+
+  hash.set(obj, cloneObj)
+
+  for (let i in obj) {
+    //因为 for...in 会遍历继承的属性
+    if (obj.hasOwnProperty(i)) {
+      cloneObj[i] = deepClone(obj[i], hash)
+    }
+  }
+  return cloneObj
+}
+```
+
+:::note 本文学习并且参考了以下内容：
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+https://yuchengkai.cn/docs/frontend/#%E6%B5%85%E6%8B%B7%E8%B4%9D
+https://vue3js.cn/interview/JavaScript/copy.html
+:::
