@@ -71,7 +71,7 @@ Have fun!
 
 Contact me by:
 
-- 公众号 : [404Lab](https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/202109050953203.png)
+- 公众号 : [404Lab](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw)
 - Telegram: [Telegram Channel](https://comments.app/view/QDRi6Hpc)
 - Email: [Hi@404Lab.top](mailto:Hi@404Lab.top)
 - 知乎: [@404Lab](https://www.zhihu.com/people/li-kang-ning)
