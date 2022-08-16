@@ -233,7 +233,34 @@ monitorEvent($0, 'keyup')
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
+### 升级 WSL2
+
+查看当前 WSL 系统与版本：
+
+```**Powershell**
+wsl -l -v
+```
+
+执行升级命令：
+
+```powershell
+wsl --set-version Ubuntu-18.04 2
+```
+
+| 功能                                           | WSL 1 | WSL 2 |
+| :--------------------------------------------- | :---- | :---- |
+| Windows 和 Linux 之间的集成                    | ✅    | ✅    |
+| 启动时间短                                     | ✅    | ✅    |
+| 与传统虚拟机相比，占用的资源量少               | ✅    | ✅    |
+| 可以与当前版本的 VMware 和 VirtualBox 一起运行 | ✅    | ✅    |
+| 托管 VM                                        | ❌    | ✅    |
+| 完整的 Linux 内核                              | ❌    | ✅    |
+| 完全的系统调用兼容性                           | ❌    | ✅    |
+| 跨 OS 文件系统的性能                           | ✅    | ❌    |
+
 > 官方安装文档：https://docs.microsoft.com/en-us/windows/wsl/install
+> 
+> WSL 版本比较： https://docs.microsoft.com/zh-cn/windows/wsl/compare-versions
 
 ### 开启 Sandbox
 

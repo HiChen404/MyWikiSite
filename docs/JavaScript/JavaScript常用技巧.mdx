@@ -1,0 +1,123 @@
+### 检查设备类型
+
+```js
+const isMobile = () => {
+  return !!navigator.userAgent.match(
+    /(iPhone|iPod|Android|ios|iOS|iPad|Backerry|WebOS|Symbian|Windows Phone|Phone)/i,
+  )
+}
+```
+
+### 判断是安卓还是苹果
+
+```js
+const isAndroid = () => {
+  return /android/i.test(navigator.userAgent.toLowerCase())
+}
+
+const isIOS = () => {
+  let reg = /iPhone|iPad|iPod|iOS|Macintosh/i
+  return reg.test(navigator.userAgent.toLowerCase())
+}
+```
+
+## 检查浏览器是否联网
+
+`Navigator.onLine`返回浏览器的联机状态，在线为`true`,离线为`false`，每当浏览器连接到网络的能力发生更改时，该属性都会发送更新。当用户在失去互联网连接后不久单击链接时，该属性应返回 `false`。
+
+检查浏览器是否在线：
+
+```javascript
+if (navigator.onLine) {
+  console.log('online')
+} else {
+  console.log('offline')
+}
+```
+
+不过如果浏览器不支持`navigator.onLine`，那么上面的示例将总是显示为 `false`/`undefined`。
+
+> 参考：https://developer.mozilla.org/en-US/docs/Web/API/Navigator/onLine
+
+## 监听网络状态的变化
+
+```js
+window.addEventListener('offline', e => {
+  console.log('offline')
+})
+
+window.addEventListener('online', e => {
+  console.log('online')
+})
+```
+
+## 快速打印变量
+
+在开发中我们经常需要打印一些变量，通常我们会这么写：
+
+```js
+const num = 10
+console.log('num:', num)
+```
+
+但是通过 ES6 的新特性，我们可以这么写：
+
+```js
+const num = 10
+console.log({ num })
+```
+
+输出的结果和用上面的方式一样，但是这种方式更加方便简洁。
+
+## 快速生成乱序随机数组
+
+首先可以生成一个数组:
+
+```js
+const arr = Array.from({ length: 10 }, (v, _) => _)
+
+//[0, 1, 2, 3, 4,5, 6, 7, 8, 9]
+```
+
+然后把这个数组随机打乱：
+
+```js
+arr.sort(() => 0.5 - Math.random())
+
+//[8, 3, 2, 4, 5, 1, 6, 7, 0, 9]
+```
+
+最后封装为函数：
+
+```js
+function getRandomArray(start, end, steps) {
+  return Array.from({ length: end - start + 1 }, (v, k) => start + k * steps).sort(
+    () => 0.5 - Math.random(),
+  )
+}
+```
+
+## 冻结对象
+
+`Object.freeze()` 方法可以冻结一个对象。
+
+```js
+const obj = { a: 10, b: 20 }
+Object.freeze(obj)
+obj.a = 20
+//a 不会被修改
+```
+
+> https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+
+## RGB 转换为 HEX
+
+```js
+  function rgbToHex = (r,g,b)=>{
+    const toHex = num => {
+    const hex = num.toString(16)
+    return hex.length === 1 ? `0${hex}` : hex
+  }
+    return `#${toHex(r)}${toHex(g)}${toHex(b)}`
+  }
+```
