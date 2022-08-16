@@ -2,7 +2,24 @@
 sidebar_position: 1
 description: 这是一个共享的知识库(Wiki Database)，内容涉及软件分享，学习笔记(JavaScript,Vue,Python,Go,Flutter,React)，搞机技巧，互联网冲浪技巧等内容。
 image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-28-23-404Lab.jpeg
-keywords: [Wiki Database, JavaScript, Vue, Python, Go, Flutter, React, 破解, 技巧, 搞机, 知识库, Github, 黑客, iOS, iPhone]
+keywords:
+  [
+    Wiki Database,
+    JavaScript,
+    Vue,
+    Python,
+    Go,
+    Flutter,
+    React,
+    破解,
+    技巧,
+    搞机,
+    知识库,
+    Github,
+    黑客,
+    iOS,
+    iPhone,
+  ]
 slug: /
 title: 互联网冲浪指南
 ---
@@ -38,6 +55,10 @@ Hi there 👋 This is [404Lab](https://mp.weixin.qq.com/s/ytNsiyIjCb-URVLY90uSMw
 你还可以试试这个工具: [ZWS 零宽字符短网址](https://zws.404lab.top)
 
 Have fun!
+
+我和朋友做了一个**疫情互助网站**，希望能帮助到一些人, 你可以分享给需要的人：
+
+<Highlight color="#ff6b81"><a style={{color:"white",fontWeight:"bold"}} href="https://helphn.cn">♥ 我们来帮你·河南疫情互助平台</a></Highlight>
 
 <img width="30%" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/04/18-21-31-02-推荐 -5-.png" alt="recommended" />
 
