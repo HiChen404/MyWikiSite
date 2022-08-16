@@ -1,0 +1,200 @@
+# React Native
+
+
+
+## 问题
+
+### 1. How to fix the module java base does not opens java io to unnamed module
+
+https://stackoverflow.com/questions/67782975/how-to-fix-the-module-java-base-does-not-opens-java-io-to-unnamed-module
+
+
+
+### 2. VSCode 中 JS 文件 “import type 只能在 TypeScript中使用” 解决方法
+
+设置中：JavaScript › Validate: Enable  切换为 关闭
+
+或：
+
+"javascript.validate.enable":false
+
+
+
+# React Native Navigation
+
+
+
+### 1. Tab.Screen 或 Stack.Screen 如何传参
+
+`Initial params`
+
+https://reactnavigation.org/docs/5.x/params/#initial-params
+
+
+# Expo 构建
+
+
+
+## 安装 WSL
+
+1。下载并启用Ubuntu
+
+https://docs.microsoft.com/en-us/windows/wsl/install
+
+
+
+商店下载 Ubuntu 后，管理员打开 powershell Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+
+
+重启后：
+
+
+
+<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/03/23-11-12-43-image-20220323111236233.png" alt="image-20220323111236233"/>
+
+
+
+```json
+ {
+   "expo": {
+    "name": "Your App Name",
+    "icon": "./path/to/your/app-icon.png",
+    "version": "1.0.0",
+    "slug": "your-app-slug",
+    "ios": {
+      "bundleIdentifier": "com.yourcompany.yourappname",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.yourcompany.yourappname",
+      "versionCode": 1
+    }
+   }
+ }
+```
+
+Run `expo build:android` or `expo build:ios`. If you don't already have a development server running for this project, `expo` will start one for you.
+
+**Please note:** When you run `expo build`, Expo automatically publishes your app (with `expo publish`). In order to avoid accidentally publishing changes to your production app, you may want to use [release channels](https://docs.expo.dev/distribution/release-channels/).
+
+
+
+
+
+https://docs.expo.dev/build/setup/
+
+Expo build 已经被废弃 ，使用 eas-cli 
+
+
+
+
+
+<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/03/23-11-19-08-image-20220323111908189.png" alt="image-20220323111908189" />
+
+
+
+
+
+使用 eas 首次需要登录
+
+
+
+
+
+eas build:configure
+
+
+
+如果要生成Apk 文件需做如下配置：
+
+
+
+https://docs.expo.dev/build-reference/apk/
+
+
+
+
+
+```json
+
+{
+  "cli": {
+    "version": ">= 0.48.2"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {}
+  }
+}
+
+```
+
+
+
+
+
+eas build -p android --profile preview
+
+<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/03/23-11-26-21-image-20220323112620957.png" alt="image-20220323112620957" />
+
+
+
+
+
+
+
+
+
+在本地构建后会同步云端
+
+
+
+此处构建了 Production 与 preview 版本  
+
+
+
+Production 为 aab 格式  preview 为 apk 版本
+
+
+
+
+
+<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/03/23-11-31-09-image-20220323113109021.png" alt="image-20220323113109021"  />
+
+
+
+
+
+<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/03/23-11-31-34-image-20220323113134883.png" alt="image-20220323113134883"  />
+
+
+
+
+
+
+
+<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/03/23-11-37-33-image-20220323113733763.png" alt="image-20220323113733763"  />
+
+
+
+eas build -p android --profile preview
