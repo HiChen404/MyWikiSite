@@ -5,7 +5,7 @@ import styles from '../css/components/tootip.module.css'
 import Highlight from '../components/highlight'
 import { useLayoutEffect } from 'react'
 
-export const ToolTip = ({ children, content }) => {
+const ToolTip = ({ children, content }) => {
   const childrenRef = useRef(null)
   const [color = 'black', setColor] = useState(null)
   const [id, setId] = useState(`tooltip-${Date.now().toString().slice(5)}`)
@@ -24,3 +24,5 @@ export const ToolTip = ({ children, content }) => {
     </span>
   )
 }
+
+export default ToolTip
