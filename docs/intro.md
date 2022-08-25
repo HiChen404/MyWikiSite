@@ -24,7 +24,8 @@ slug: /
 title: 互联网冲浪指南
 ---
 
-import { Highlight } from "../src/components/MyMDX"
+import Highlight from "../src/components/highlight"
+import ToolTip from "../src/components/tooltip"
 
 <a href="https://github.com/HiChen404/MyWikiSite">
 <img alt="github" className="Badges" src="https://img.shields.io/github/last-commit/HiChen404/MyWikiSite?label=%E4%B8%8A%E6%AC%A1%E6%9B%B4%E6%96%B0&logo=github&style=for-the-badge" width="135px"/>
@@ -58,7 +59,9 @@ Have fun!
 
 我和朋友做了一个**疫情互助网站**，希望能帮助到一些人, 你可以分享给需要的人：
 
-<Highlight color="#ff6b81"><a style={{color:"white",fontWeight:"bold"}} href="https://helphn.cn">♥ 我们来帮你·河南疫情互助平台</a></Highlight>
+<ToolTip content='https://helphn.cn'>
+  <Highlight color='#ff6b81'><a style={{color:"white",fontWeight:"bold"}} href="https://helphn.cn">♥ 我们来帮你·河南疫情互助平台</a></Highlight>
+</ToolTip>
 
 <img width="30%" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/04/18-21-31-02-推荐 -5-.png" alt="recommended" />
 

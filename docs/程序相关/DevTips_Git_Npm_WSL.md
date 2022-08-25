@@ -7,7 +7,7 @@ image: https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/01/19-11-
 tags: [Skill]
 ---
 
-import { Highlight } from "../../src/components/MyMDX"
+import Highlight from "../../src/components/highlight"
 
 <Highlight color="#aa00ff">404Lab</Highlight>
 
@@ -259,7 +259,7 @@ wsl --set-version Ubuntu-18.04 2
 | 跨 OS 文件系统的性能                           | ✅    | ❌    |
 
 > 官方安装文档：https://docs.microsoft.com/en-us/windows/wsl/install
-> 
+>
 > WSL 版本比较： https://docs.microsoft.com/zh-cn/windows/wsl/compare-versions
 
 ### 开启 Sandbox
