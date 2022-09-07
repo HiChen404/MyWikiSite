@@ -72,15 +72,11 @@ npm config delete https-proxy
 
 #### Pnpm
 
-Pnpm:
-
 ```
 pnpm install -g vite
 ```
 
 #### Yarn
-
-Yarn:
 
 ```
 yarn add -g vite
@@ -140,6 +136,20 @@ $ git commit -c ORIG_HEAD                      # (4)
 
 > 参考：
 > https://stackoverflow.com/questions/927358
+
+### 错误解决
+
+#### 网络错误 443
+
+通常在开了代理之后，可以正常访问 Github 网站，但 Git 提示：
+
+<Highlight colorName="red">Failed to connect to github.com port 443: Operation timed out</Highlight>
+
+这个时候可以尝试刷新系统 DNS:
+
+```shell
+ipconfig /flushdns
+```
 
 ## 浏览器 DevTool
 
