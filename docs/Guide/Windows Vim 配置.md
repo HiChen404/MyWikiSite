@@ -30,9 +30,10 @@ set hlsearch
 ```
 
 样式上的前后对比：
-<div style={{display:"flex"}}>
-<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/09/07-18-36-28-image-20220907183625439.png" alt="image-20220907183625439"/>
-<img src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/09/07-18-36-36-image-20220907183634162.png" alt="image-20220907183634162"/>
+
+<div style={{display:"flex",flexWrap:"wrap"}}>
+<img width="50%" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/09/07-18-36-28-image-20220907183625439.png" alt="image-20220907183625439"/>
+<img width="50%" src="https://picgo-1259617372.cos.ap-beijing.myqcloud.com/Picgo/2022/09/07-18-36-36-image-20220907183634162.png" alt="image-20220907183634162"/>
 </div>
 
 当然除了样式，还设置了**自动换行**，**语法高亮**，**智能缩进**，**高亮搜索**等等。
