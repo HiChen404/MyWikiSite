@@ -119,3 +119,70 @@
     flex-direction: row;
   }
 }
+
+/*  myNewHero */
+.parallax {
+  margin-top: 80px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.parallax img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+/* #text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3em;
+  color: #112434;
+} */
+
+/* my Logo */
+.container {
+  position: relative;
+  left: 150px;
+  top: -230px;
+}
+
+.h1 {
+  font-size: 100px;
+  width: 400px;
+  line-height: 1em;
+  letter-spacing: -0.03em;
+  position: relative;
+  /* color: white; */
+  /* height: 132px; */
+  user-select: none;
+}
+
+.h1 svg {
+  position: absolute;
+  bottom: -100px;
+  left: 65px;
+  z-index: -1;
+}
+
+#tick {
+  stroke-dasharray: 210px;
+  stroke-dashoffset: 210px;
+  animation: 3s tick ease-in-out infinite;
+}
+
+@keyframes tick {
+  0%,
+  50% {
+    stroke-dashoffset: 210px;
+  }
+
+  50%,
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
