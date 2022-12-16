@@ -68,6 +68,30 @@ npm config delete proxy
 npm config delete https-proxy
 ```
 
+### 提升构建速度
+
+#### 使用国内 registry 和 mirror
+
+如果使用 NPM, 可以创建 .npmrc 并设置:
+
+```js
+registry = 'https://registry.npmmirror.com'
+sass_binary_site = 'https://npmmirror.com/mirrors/node-sass/'
+phantomjs_cdnurl = 'https://cdn.npmmirror.com/binaries/phantomjs'
+electron_mirror = 'https://cdn.npmmirror.com/binaries/electron/'
+sqlite3_binary_host_mirror = 'https://foxgis.oss-cn-shanghai.aliyuncs.com/'
+chromedriver_cdnurl = 'https://cdn.npmmirror.com/binaries/chromedriver'
+```
+
+#### 构建中使用全局缓存
+
+构建时，使用以下命令设置 npm 的全局缓存路径，并在流水线自定义缓存配置中添加/root/.npm 缓存路径，并使用以下命令安装依赖包，优先从本地缓存获取依赖包：
+
+```js
+npm config set cache ~/.npm
+npm install --prefer-offline --no-audit
+```
+
 ### 替代工具
 
 #### Pnpm
@@ -81,6 +105,46 @@ pnpm install -g vite
 ```
 yarn add -g vite
 ```
+
+##### Yarn 构建加速
+
+###### 使用国内 registry 和 mirror
+
+使用国内 registry 仓库避免由于海外网络访问导致的依赖下载慢的问题
+
+```js
+yarn config set registry https://npmmirror.com
+```
+
+对于构建中由于<Highlight colorName='yellow'  >Aborting commit due to empty commit message</Highlight>导致构建慢的情况需要指定特定外部依赖的国内镜像源：
+
+```js
+yarn config set sass_binary_site "https://npmmirror.com/mirrors/node-sass/"
+```
+
+除了通过 yarn config set 指定依赖下载路径以外，还可以通过.yarnrc 进行配置。在项目根路径中创建.yarnrc 并配置以下内容：
+
+```js
+registry "https://registry.npmmirror.com"
+sass_binary_site "https://npmmirror.com/mirrors/node-sass/"
+phantomjs_cdnurl "https://cdn.npmmirror.com/binaries/phantomjs"
+electron_mirror "https://cdn.npmmirror.com/binaries/electron/"
+sqlite3_binary_host_mirror "https://foxgis.oss-cn-shanghai.aliyuncs.com/"
+chromedriver_cdnurl "https://cdn.npmmirror.com/binaries/chromedriver"
+```
+
+###### 配置 yarn 全局缓存
+
+设置缓存目录，并在流水线自定义缓存中添加缓存目录/root/.yarn 配置
+
+```js
+# 设置全局缓存
+yarn config set cache-folder ~/.yarn
+# 构建中优先使用缓存中
+yarn install --prefer-offline
+```
+
+> 参考文档：https://help.aliyun.com/document_detail/202442.html#section-l9k-giw-5ta
 
 ## Git
 
