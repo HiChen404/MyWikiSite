@@ -20,7 +20,13 @@ const config = {
     defaultLocale: 'zh-cn',
     locales: ['zh-cn'],
   },
-
+  scripts:[
+     {
+      src: process.env.track_url,
+      'data-website-id':process.env.track_id,
+      async: true,
+    }
+  ],
   presets: [
     [
       'classic',
